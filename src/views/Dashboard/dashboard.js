@@ -1,6 +1,7 @@
 // import { BarChart } from '@material-ui/icons';
 import React, { Component } from 'react'
 import {Container,Row,Col, Card,CardBody,CardImg,Table, CardHeader} from 'reactstrap'
+import Account from '../../components/accounts/account';
 import BarChart from '../../components/barChart/barchart';
 import LineChart from '../../components/linechart/linechart';
 import Charts from '../../components/linechart/linechart';
@@ -11,12 +12,18 @@ export default class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state={
-            notificationOpen:false
+            notificationOpen:false,
+            accountOpen:false,
         }
     }
     handleNotification=()=>{
         this.setState({
             notificationOpen:!this.state.notificationOpen
+        })
+    }
+    handleAccount=()=>{
+        this.setState({
+            accountOpen:!this.state.accountOpen
         })
     }
     render() {
@@ -30,7 +37,7 @@ export default class Dashboard extends Component {
                                 <span className="">January 17,2021</span>
                             </div>
                             <div className="header-right">
-                                <span className="avatar ">JD</span>
+                                <span style={{cursor:'pointer'}} onClick={this.handleAccount} className="avatar ">JD</span>
                                 <span style={{cursor:'pointer'}} onClick={this.handleNotification}><i class="fas fa-lg fa-bell text-secondary"></i></span>
                                 <span style={{cursor:'pointer'}} onClick={this.handleNotification} class="badge   bg-danger">9</span>
                             </div>
@@ -83,11 +90,27 @@ export default class Dashboard extends Component {
                         <Card>
                             <CardHeader>
                                
-                            <h6 className="fw-bold ">PERFORMANCE BY DAY</h6>
+                            <Row>
+                                <Col md={6}>
+                                <h6 className="fw-bold ">DASHBOARD</h6>
                             <div style={{marginTop:'-12px'}}>
-                            <span clasName="text-secondary" style={{fontSize:'8px'}}>Total Card Opens <i class="fas ps-2 fa-caret-down"></i></span>
-                            <span className="ps-3 text-secondary" style={{fontSize:'8px'}}>Months <i class="fas ps-2 fa-caret-down"></i></span>
+                            <span clasName="text-secondary" style={{fontSize:'8px'}}>Total Engagments <i class="fas ps-2 fa-caret-down"></i></span>
+                            <span className="ps-3 text-secondary" style={{fontSize:'8px'}}>All Cards <i class="fas ps-2 fa-caret-down"></i></span>
                             </div>
+                                </Col>
+                                <Col md={3}>
+                                    <div className="pt-2">
+                                    <span style={{fontSize:'10px'}} className="text-secondary pt-2 pe-3">FROM</span>
+                                    <span style={{fontSize:'14px'}} className="fw-bold pt-1">01/01/2021</span>
+                                    </div>
+                                </Col>
+                                <Col md={3}>
+                                <div className="pt-2">
+                                    <span style={{fontSize:'10px'}} className="text-secondary pt-2 pe-3">TO</span>
+                                    <span style={{fontSize:'14px'}} className="fw-bold pt-1">01/01/2021</span>
+                                    </div>
+                                </Col>
+                            </Row>
                            
                             
                             </CardHeader>
@@ -175,6 +198,7 @@ export default class Dashboard extends Component {
                     </Col>
                 </Row>
                 <Notification notificationOpen={this.state.notificationOpen} onClick={this.handleNotification}/>
+                <Account accountOpen={this.state.accountOpen} onClick={this.handleAccount}/>
             </Container>
                
             </>
