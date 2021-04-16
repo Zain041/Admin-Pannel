@@ -47,7 +47,7 @@ export default class Dashboard extends Component {
                             <Row>
                                 <Col className="ps-0 pt-2" md={4}>
                                     <Card>
-                                        <div className="p-3">
+                                        <div className="p-3 card-bg bg-exposure">
                                             <h6 className="pb-0 mb-0 fw-bold">EXPOSURE</h6>
                                             <span style={{ fontSize: '8px', marginTop: '-10px' }} className="text-secondary">From January,2021</span>
                                             <p className="fw-bold">8514</p>
@@ -60,7 +60,7 @@ export default class Dashboard extends Component {
                                 </Col>
                                 <Col className="ps-0 pt-2" md={4}>
                                     <Card>
-                                        <div className="p-3">
+                                        <div className="p-3 card-bg bg-open-card">
                                             <h6 className="pb-0 mb-0 fw-bold">CARD OPENS</h6>
                                             <span style={{ fontSize: '8px', marginTop: '-10px' }} className="text-secondary">From January,2021</span>
                                             <p className="fw-bold">8514</p>
@@ -73,11 +73,11 @@ export default class Dashboard extends Component {
 
                                 <Col className="ps-0 pt-2" md={4}>
                                     <Card style={{ backgroundColor: '#7F48F7', color: 'white' }}>
-                                        <div className="p-3">
-                                            <h6 className="pb-0 mb-0 fw-bold">CARD OPENS</h6>
+                                        <div className="p-3 card-bg bg-saved-card">
+                                            <h6 className="pb-0 mb-0 fw-bold">SAVED CARDS</h6>
                                             <span style={{ fontSize: '8px', marginTop: '-10px' }} className="">From January,2021</span>
-                                            <p className="fw-bold">8514</p>
-                                            <span  > 74% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
+                                            <p className="fw-bold">23</p>
+                                            <span  > 3.9% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
                                             <i style={{ float: 'right', marginTop: '-90px' }} class="fas  fa-ellipsis-h"></i>
                                             {/* <i style={{float:'right'}} class="far fa-3x fa-heart "></i> */}
                                         </div>
@@ -91,21 +91,21 @@ export default class Dashboard extends Component {
                                         <CardHeader className="bg-white">
 
                                             <Row>
-                                                <Col md={6}>
+                                                <Col md={8}>
                                                     <h6 className="fw-bold ">DASHBOARD</h6>
                                                     <div style={{ marginTop: '-12px' }}>
                                                         <span clasName="text-secondary" style={{ fontSize: '8px' }}>Total Engagments <i class="fas ps-2 fa-caret-down"></i></span>
                                                         <span className="ps-3 text-secondary" style={{ fontSize: '8px' }}>All Cards <i class="fas ps-2 fa-caret-down"></i></span>
                                                     </div>
                                                 </Col>
-                                                <Col md={3}>
+                                                <Col md={2}>
                                                     <div className="pt-2">
                                                         <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">FROM</span>
                                                         <span style={{ fontSize: '14px' }} className="fw-bold pt-1">01<span style={{ fontSize: '10px' }}>/</span>01<span style={{ fontSize: '10px' }}>/</span>2021</span>
                                                         <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span>
                                                     </div>
                                                 </Col>
-                                                <Col md={3}>
+                                                <Col md={2}>
                                                     <div className="pt-2">
                                                         <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">TO</span>
                                                         <span style={{ fontSize: '14px' }} className="fw-bold pt-1">01<span style={{ fontSize: '10px' }}>/</span>01<span style={{ fontSize: '10px' }}>/</span>2021</span>
@@ -113,8 +113,6 @@ export default class Dashboard extends Component {
                                                     </div>
                                                 </Col>
                                             </Row>
-
-
                                         </CardHeader>
                                         <LineChart />
                                     </Card>
@@ -161,17 +159,17 @@ export default class Dashboard extends Component {
                             <Card>
                                 <CardHeader className="bg-white">
                                     <Row>
-                                        <Col md={6}>
+                                        <Col md={8}>
                                             <h6 className="fw-bold pt-2">CARD PERFORMANCE</h6>
                                         </Col>
-                                        <Col md={3}>
+                                        <Col md={2}>
                                             <div className="pt-2">
                                                 <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">FROM</span>
                                                 <span style={{ fontSize: '14px' }} className="fw-bold pt-1">01<span style={{ fontSize: '10px' }}>/</span>01<span style={{ fontSize: '10px' }}>/</span>2021</span>
                                                 <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span>
                                             </div>
                                         </Col>
-                                        <Col md={3}>
+                                        <Col md={2}>
                                             <div className="pt-2">
                                                 <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">TO</span>
                                                 <span style={{ fontSize: '14px' }} className="fw-bold pt-1">01<span style={{ fontSize: '10px' }}>/</span>01<span style={{ fontSize: '10px' }}>/</span>2021</span>

@@ -32,7 +32,7 @@ export default function BasicTable() {
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead>
+        <TableHead style={{backgroundColor: '#f2f4f5'}}>
           <TableRow>
             <TableCell><b>Deal</b></TableCell>
             <TableCell align="left"><b>Price</b>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>

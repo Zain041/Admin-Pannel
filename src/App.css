@@ -93,3 +93,22 @@ body, html {
     }
   } */
   
+
+  .card-bg {
+    background-position: right 10px bottom 5px;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    box-sizing: border-box;
+  }
+
+  .bg-saved-card {
+    background-image: url(./assets/heart.svg);
+  }
+
+  .bg-open-card {
+    background-image: url(./assets/hand.svg);
+  }
+
+  .bg-exposure {
+    background-image: url(./assets/shop.svg);
+  }
