@@ -23,7 +23,7 @@ const rows = [
   createData('Text Card Title Goes Here', "$237", 9.0, 37, 4.3),
   createData('Text Card Title Goes Here', "$262", 16.0, 24, 6.0),
   createData('Text Card Title Goes Here', "$305", 3.7, 67, 4.3),
-  
+
 ];
 
 export default function BasicTable() {
@@ -35,22 +35,22 @@ export default function BasicTable() {
         <TableHead>
           <TableRow>
             <TableCell><b>Deal</b></TableCell>
-            <TableCell align="right"><b>Price</b></TableCell>
-            <TableCell align="right"><b>Exposure</b></TableCell>
-            <TableCell align="right"><b>Opens</b></TableCell>
-            <TableCell align="right"><b>Engagments</b></TableCell>
+            <TableCell align="left"><b>Price</b>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
+            <TableCell align="left"><b>Exposure</b>    <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
+            <TableCell align="left"><b>Opens</b>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
+            <TableCell align="left"><b>Engagments</b>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.name}>
+            <TableRow hover={true} key={row.name}>
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="left">{row.calories}</TableCell>
+              <TableCell align="left">{row.fat}</TableCell>
+              <TableCell align="left">{row.carbs}</TableCell>
+              <TableCell align="left">{row.protein}</TableCell>
             </TableRow>
           ))}
         </TableBody>
