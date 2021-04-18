@@ -11,13 +11,13 @@ import {
 import { Animation } from '@devexpress/dx-react-chart';
 
 const data = [
-  { year: 'Mon', population: 2.525 },
-  { year: 'Tue', population: 3.018 },
-  { year: 'Wed', population: 3.682 },
-  { year: 'Thu', population: 4.440 },
-  { year: 'Fri', population: 5.310 },
-  { year: 'Sat', population: 6.127 },
-  { year: 'Sun', population: 6.930 },
+  { year: 'Mon', population: 9 },
+  { year: 'Tue', population: 12 },
+  { year: 'Wed', population: 5 },
+  { year: 'Thu', population: 18 },
+  { year: 'Fri', population: 22 },
+  { year: 'Sat', population: 21 },
+  { year: 'Sun', population: 15 },
 ];
 
 export default class Demo extends React.PureComponent {
@@ -35,15 +35,14 @@ export default class Demo extends React.PureComponent {
     return (
       <Paper>
         <Chart height={265}
-        
+
           data={chartData}
         >
           <ArgumentAxis />
           <ValueAxis max={7} />
 
           <BarSeries
-          color="#7F48F7"
-          
+            color="#7F48F7"
             valueField="population"
             argumentField="year"
           />

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Col, Row, Card, Button, CardImg, CardBody } from 'reactstrap'
+import CardDropdown from '../select/selectCard'
 import '../../assets/css/draftCards.css'
 export default class DraftCard extends Component {
     render() {
@@ -7,12 +8,12 @@ export default class DraftCard extends Component {
             <>
                 <Card className=" section-card shadow-sm mt-4">
                     <Row className="p-4">
-                        <Col md={6} sm={12}>
+                        <Col md={7} sm={12}>
                             <h3>Title post Listing</h3>
                             <p className="text-secondary">Subtitle post listing description</p>
                             <p className="mb-0">Expiry:-</p><br></br>
 
-                            <p className="  text-secondary "> <i class="fas fa-circle "></i> Draft <i class="fas fa-sort-down"></i></p>
+                            <p className="  text-secondary "> <i class="fas fa-circle "></i> <CardDropdown selected="Draft" /> </p>
                             <h6>Price:$4.00</h6>
 
 
@@ -22,7 +23,7 @@ export default class DraftCard extends Component {
                             </div>
 
                         </Col>
-                        <Col md={6} sm={12}>
+                        <Col md={5} sm={12} className="px-4 py-2">
                             <Card className="card-wrapper shadow-sm rounded">
                                 <CardImg top className="card-img" src="https://via.placeholder.com/80" alt="Card image cap" />
                                 <CardBody>

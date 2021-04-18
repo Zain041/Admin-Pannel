@@ -1,148 +1,169 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body,html{
+body,
+html {
     font-family: 'Montserrat', sans-serif;
-    padding:0px;
-    margin:0px;
+    padding: 0px;
+    margin: 0px;
     background-color: #F5F6F7;
 }
 
 
 /* active cards , draft cards, expired cards, layout css start */
-.header-heading{
-    color:#7F48F7;
+.header-heading {
+    color: #7F48F7;
     font-weight: 600;
     padding-top: 50px;
-   
+
 }
-.wrapper{
+
+.wrapper {
     padding-left: 60px;
-    width:full;
+    width: full;
     overflow-x: hidden;
     overflow-y: auto !important;
 }
-.avatar{
-    width:40px;
-    height:40px;
+
+.avatar {
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-    border:2px solid #7F48F7;
-    padding:8px;
-   color:white;
-   margin-right: 10px;
-   background-color: #B2B4B3;
+    border: 2px solid #7F48F7;
+    padding: 8px;
+    color: white;
+    margin-right: 10px;
+    background-color: #B2B4B3;
 }
-.header-right{
+
+.header-right {
     position: absolute;
-    right:0;
+    right: 0;
     padding-right: 50px;
     padding-top: 30px;
 }
-.section-card{
-    border-left:5px solid #7F48F7;
+
+.section-card {
+    border-left: 5px solid #7F48F7;
 
 }
-.badge{
-    position:absolute;
-   padding-top:5px;
-   padding-bottom:5px;
-   padding-right: 7px;
-   padding-left: 7px;
-   border-radius: 100%;
-   font-size: 9px;
-   margin-left: -6px;
-   margin-top: -5px;
+
+.badge {
+    position: absolute;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+    border-radius: 100%;
+    font-size: 9px;
+    margin-left: -6px;
+    margin-top: -5px;
 
 }
-.card-img{
-    height:100px;
-    width:auto;
-    opacity:0.5;
+
+.card-img {
+    height: 100px;
+    width: auto;
+    opacity: 0.5;
+    object-fit: cover;
 }
-.card-img-2{
-    height:50px;
-    width:50px;
+
+.card-img-2 {
+    height: 50px;
+    width: 50px;
     background-image: url('https://via.placeholder.com/80');
     background-position: center;
     background-size: cover;
-    background-repeat:no-repeat;
-    border:2px solid black;
-    
+    background-repeat: no-repeat;
+    border: 2px solid black;
+
     margin-top: -53px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
-.card-wrapper{
-    margin-top:20px;
+
+.card-wrapper {
+    margin-top: 20px;
 }
-.dollar{
-    width:40px;
-    height:40px;
+
+.dollar {
+    width: 40px;
+    height: 40px;
     text-align: center;
-    background-color: #7F48F7 ;
-    color:white;
+    background-color: #7F48F7;
+    color: white;
     border-radius: 100%;
-    position:absolute;
+    position: absolute;
     padding-top: 10px !important;
 
     margin-bottom: -40px;
     /* margin-left: -6px;
     margin-top: -30px; */
 }
-.star{
-    float:right;
+
+.star {
+    float: right;
     margin-top: -50px;
     font-size: small;
-    color:#7F48F7;
+    color: #7F48F7;
 }
-.card-heading{
+
+.card-heading {
     font-size: 12px;
     font-weight: 900;
     margin-top: -10px !important;
     margin-left: 50px;
 }
-.card-description{
+
+.card-description {
     font-size: 8px;
     margin-left: 50px;
     margin-top: -10px !important;
     font-weight: 600;
-  
-    
-    
+
+
+
 }
-.card-sub-description{
+
+.card-sub-description {
     font-size: 8px;
     margin-left: 50px;
     margin-top: -10px !important;
-    color:#7F48F7;
-  
-    
-    
+    color: #7F48F7;
+
+
+
 }
+
 @media screen and (max-width: 768px) {
-    .button-section{
-        margin-top:10px !important;
-         float:left !important;
-     }
-     .wrapper{
+    .button-section {
+        margin-top: 10px !important;
+        float: left !important;
+    }
+
+    .wrapper {
         padding-left: 0px !important;
-     }
-  }
-.button-section{
-   margin-top: -50px;
-    float:right;
+    }
 }
+
+.button-section {
+    margin-top: -50px;
+    float: right;
+}
+
 @media screen and (max-width: 315px) {
-   
-.button-section>button{
-  margin-top: 10px !important;
+
+    .button-section>button {
+        margin-top: 10px !important;
+    }
 }
-}
-.button-section>button{
+
+.button-section>button {
     margin-right: 10px;
 }
- .button-section>button>i{
-    color:#7F48F7 !important;
+
+.button-section>button>i {
+    color: #7F48F7 !important;
 }
+
 /*
 .button-section>button>i:hover{
     color:white ;
@@ -160,3 +181,41 @@ body,html{
    padding-left: 9px;
     border-radius: 100%;
 } */
+
+.sorting-btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: .25rem;
+}
+.up-arrow {
+    width: 0;
+    height: 0;
+    border: solid 3px transparent;
+    background: transparent;
+    border-bottom: solid 5px #B2B4B3;
+    border-top-width: 0;
+    cursor: pointer;
+}
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    border: solid 3px transparent;
+    background: transparent;
+    border-top: solid 5px #B2B4B3;
+    border-bottom-width: 0;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.custom-select-mui {
+    margin-left: .25rem;
+    margin-top: -.25rem;
+}
+.custom-select-mui::before{
+    border-bottom: none !important;
+}
+
+.custom-select-mui:focus, .custom-select-mui:active, .custom-select-mui::before {
+    border-bottom: none !important;
+}

@@ -3,12 +3,13 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap
 
 const SimpleSelect = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdown, setDropdown] = useState('Active');
 
   const toggle = () => setDropdownOpen(prevState => !prevState);
-
+  const handleDropDown = () => alert('');
   return (
-    <Dropdown  className="bg-white ps-4"isOpen={dropdownOpen} toggle={toggle}>
-      <DropdownToggle style={{backgroundColor:'#F5F6F7',border:'1px solid #d7dad7d5'}} className=" text-secondary " caret>
+    <Dropdown className="bg-white ps-4" isOpen={dropdownOpen} toggle={toggle}>
+      <DropdownToggle style={{ backgroundColor: '#F5F6F7', border: '1px solid #d7dad7d5' }} className=" text-secondary " caret>
         {props.label} &nbsp; &nbsp;
       </DropdownToggle>
       <DropdownMenu>

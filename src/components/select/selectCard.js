@@ -1,22 +1,26 @@
+import { FormControl, MenuItem, Select } from '@material-ui/core';
 import React, { useState } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 const SimpleSelect = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+ 
   const toggle = () => setDropdownOpen(prevState => !prevState);
 
   return (
-    <Dropdown  className="bg-white ps-4"isOpen={dropdownOpen} toggle={toggle}>
-      <DropdownToggle style={{backgroundColor:'#fff',border:'transparent',marginTop:'-50px'}} className=" text-secondary " caret>
-        Draft &nbsp; &nbsp;
-      </DropdownToggle>
-      <DropdownMenu>
-       
-        <DropdownItem>Draft</DropdownItem>
-        <DropdownItem>Active</DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
+    <FormControl >
+      <Select
+        displayEmpty
+        className="custom-select-mui"
+        defaultValue={props.selected}
+        inputProps={{ 'aria-label': 'Without label', disableUnderline: true }}>
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        <MenuItem value={'Active'}>Active</MenuItem>
+        <MenuItem value={'Draft'}>Draft</MenuItem>
+      </Select>
+    </FormControl>
   );
 }
 

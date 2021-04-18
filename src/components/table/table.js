@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles({
   table: {
@@ -19,26 +20,53 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData('Text Card Title Goes Here', "$159",   3.7,4.3, 24, ),
-  createData('Text Card Title Goes Here', "$237",  4.0,6.0, 24),
-  createData('Text Card Title Goes Here', "$262", 4.3,9.0, 37),
-  createData('Text Card Title Goes Here', "$305", 6.0 ,16.0, 67 ),
+  createData('Text Card Title Goes Here', "$159", 3.7, 4.3, 24,),
+  createData('Text Card Title Goes Here', "$237", 4.0, 6.0, 24),
+  createData('Text Card Title Goes Here', "$262", 4.3, 9.0, 37),
+  createData('Text Card Title Goes Here', "$305", 6.0, 16.0, 67),
 
 ];
 
 export default function BasicTable() {
   const classes = useStyles();
 
+  const handleSort = () => {
+    alert('sorting icon clicked');
+  }
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead style={{backgroundColor: '#f2f4f5'}}>
+        <TableHead style={{ backgroundColor: '#f2f4f5' }}>
           <TableRow>
-            <TableCell><span style={{fontWeight:'600'}}>Deal</span></TableCell>
-            <TableCell align="left"><span  style={{fontWeight:'600'}}>Price</span>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
-            <TableCell align="left"><span  style={{fontWeight:'600'}}>Exposure</span>    <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
-            <TableCell align="left"><span  style={{fontWeight:'600'}}>Opens </span>  <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
-            <TableCell align="left"><span  style={{fontWeight:'600'}}>Engagments</span>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
+            <TableCell><span style={{ fontWeight: '600' }}>Deal</span></TableCell>
+            <TableCell align="left">
+              <span style={{ fontWeight: '600' }}>Price</span>
+              <Box className="sorting-btn" onClick={handleSort}>
+                <Box component="div" className="up-arrow"></Box>
+                <Box component="div" className="down-arrow" ></Box>
+              </Box>
+            </TableCell>
+            <TableCell align="left">
+              <span style={{ fontWeight: '600' }}>Exposure</span>
+              <Box className="sorting-btn" onClick={handleSort}>
+                <Box component="div" className="up-arrow"></Box>
+                <Box component="div" className="down-arrow" ></Box>
+              </Box>
+            </TableCell>
+            <TableCell align="left">
+              <span style={{ fontWeight: '600' }}>Opens </span>
+              <Box className="sorting-btn" onClick={handleSort}>
+                <Box component="div" className="up-arrow"></Box>
+                <Box component="div" className="down-arrow" ></Box>
+              </Box>
+            </TableCell>
+            <TableCell align="left">
+              <span style={{ fontWeight: '600' }}>Engagments</span>
+              <Box className="sorting-btn" onClick={handleSort}>
+                <Box component="div" className="up-arrow"></Box>
+                <Box component="div" className="down-arrow" ></Box>
+              </Box>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -46,6 +46,7 @@
     height:100px;
     width:auto;
     opacity:0.5;
+    object-fit: cover;
 }
 .card-img-2{
     height:50px;

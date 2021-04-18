@@ -1,8 +1,9 @@
-input[type="text"]{
-    padding:3px;
-    width: 55px !important;
-font-size: 8px !important;
-font-weight: 800 !important;
-border:transparent !important;
-cursor:pointer;
+.custom-date-picker input[type="text"] {
+    padding: 3px;
+    width: 75px !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    border: transparent !important;
+    vertical-align: middle;
+    cursor: pointer;
 }

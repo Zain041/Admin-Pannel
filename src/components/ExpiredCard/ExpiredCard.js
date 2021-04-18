@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { Col, Row, Card, Button, CardImg, CardBody } from 'reactstrap'
 import '../../assets/css/ExpiredCards.css'
 import Datepickers from '../datepicker/dashboardDatePicker'
+import FilterDateRange from '../select/DateFilter'
 
 export default class ExpiredCard extends Component {
-  
-    
+
+
     render() {
         return (
             <>
@@ -14,9 +15,9 @@ export default class ExpiredCard extends Component {
                         <Col md={4} sm={12}>
                             <h3>Title post Listing</h3>
                             <p className="text-secondary">Subtitle post listing description</p>
-                            <p className="mb-0">Expiry:-</p><br></br>
+                            <p className="mb-0" style={{fontWeight: '500', fontSize: 'medium'}}>Expiry:- Jan 28, 2021 - 8:00 AM EST</p><br></br>
 
-                            <p className="  text-secondary "> <i class="fas text-danger fa-circle "></i> Draft <i class="fas fa-sort-down"></i></p>
+                            <p className="  text-secondary "> <i class="fas text-danger fa-circle "></i> Expired </p>
                             <h6>Price:$4.00</h6>
 
 
@@ -27,31 +28,33 @@ export default class ExpiredCard extends Component {
 
                         </Col>
                         <Col md={4} sm={12}>
-                            <p className="text-secondary">Date range <span style={{color:'#7F48F7'}}><Datepickers/><i class="fas fa-sort-down text-secondary"></i></span></p>
-                           
-                           <div className="d-flex">
+                            <p className="text-secondary">Date range
+                                <span style={{ color: '#7F48F7' }}> <FilterDateRange /> </span>
+                            </p>
+
+                            <div className="d-flex">
                                 <span className="box rounded">
-                                <span><b>Exposure</b></span><br></br>
-                                <span className="text-secondary"><b>8514</b></span>
-                            </span>
-                            <span className="box rounded">
-                                <span><b>Opens</b></span><br></br>
-                                <span className="text-secondary"><b>3514</b></span>
-                            </span>
+                                    <span><b>Exposure</b></span><br></br>
+                                    <span className="text-secondary" style={{ fontWeight: '500' }}>8514</span>
+                                </span>
+                                <span className="box rounded">
+                                    <span><b>Opens</b></span><br></br>
+                                    <span className="text-secondary" style={{ fontWeight: '500' }}>3514</span>
+                                </span>
                             </div>
                             <div className="d-flex">
                                 <span className="box rounded">
-                                <span><b>Saves</b></span><br></br>
-                                <span className="text-secondary"><b>3514</b></span>
-                            </span>
-                            <span className="box rounded">
-                                <span><b>Shares</b></span><br></br>
-                                <span className="text-secondary"><b>3514</b></span>
-                            </span>
+                                    <span><b>Saves</b></span><br></br>
+                                    <span className="text-secondary" style={{ fontWeight: '500' }}>3514</span>
+                                </span>
+                                <span className="box rounded">
+                                    <span><b>Shares</b></span><br></br>
+                                    <span className="text-secondary" style={{ fontWeight: '500' }}>3514</span>
+                                </span>
                             </div>
                         </Col>
                         <Col md={4} sm={12}>
-                        
+
                             <Card className="card-wrapper shadow-sm rounded">
                                 <CardImg top className="card-img" src="https://via.placeholder.com/80" alt="Card image cap" />
                                 <CardBody>
@@ -71,7 +74,7 @@ export default class ExpiredCard extends Component {
                                 </CardBody>
                             </Card>
                         </Col>
-                     
+
                     </Row>
                 </Card>
             </>
