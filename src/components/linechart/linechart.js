@@ -7,7 +7,7 @@ export default class LineChart extends Component {
       <div>
         <Chart
           width={'100%'}
-          height={'350px'}
+          height={'325px'}
           color="#7F48F7"
           chartType="LineChart"
           loader={<div>Loading Chart</div>}
