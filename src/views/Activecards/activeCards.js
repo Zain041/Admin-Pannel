@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import '../../assets/css/draftCards.css'
-import ExpiredCard from '../../components/ActiveCard/ActiveCard'
+import ActiveCard from '../../components/ActiveCard/ActiveCard'
 import Notification from '../../components/Notifications/notification';
 import Account from '../../components/accounts/account';
 
@@ -41,16 +41,16 @@ export default class ActiveCards extends Component {
                             </div>
                         </div>
                         <div className="col-lg-11 col-md-10 colsm-12">
-                            <ExpiredCard/>
+                        <ActiveCard/>
 
                         </div>
                         <div className="col-lg-11 col-md-10 col-sm-12">
-                        <ExpiredCard/>
+                        <ActiveCard/>
 
 
                         </div>
                         <div className="col-lg-11 col-md-10 col-sm-12">
-                        <ExpiredCard/>
+                        <ActiveCard/>
 
 
                         </div>

@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Col, Row, Card, Button, CardImg, CardBody } from 'reactstrap'
 import '../../assets/css/ActiveCards.css'
+import {Link } from 'react-router-dom'
 
-export default class ExpiredCard extends Component {
+export default class ActiveCard extends Component {
     render() {
         return (
             <>
-                <Card className=" section-card shadow-sm mt-4">
+                <Card className=" section-card shadow-sm  mt-4">
                     <Row className="p-4">
                         <Col md={4} sm={12}>
                             <h3>Title post Listing</h3>
@@ -18,7 +19,7 @@ export default class ExpiredCard extends Component {
 
 
                             <div class="button-section">
-                                <Button className="bg-transparent button text-dark border border-none  "><i class="far fa-edit"></i> Edit</Button>
+                               <Link to="/edit-card"><Button className="bg-transparent button text-dark border border-none  "><i class="far fa-edit"></i> Edit</Button></Link> 
                                 <Button className="bg-transparent button text-dark border border-none"><i class="far fa-trash-alt"></i> Delete</Button>
                             </div>
 
@@ -49,7 +50,7 @@ export default class ExpiredCard extends Component {
                         </Col>
                         <Col md={4} sm={12}>
                         
-                            <Card className="card-wrapper">
+                            <Card className="card-wrapper shadow-sm rounded">
                                 <CardImg top className="card-img" src="https://via.placeholder.com/80" alt="Card image cap" />
                                 <CardBody>
                                     <div className="card-img-2"></div>

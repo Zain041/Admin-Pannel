@@ -6,6 +6,9 @@ import DraftCards from './views/Draftcards/draftCards';
 import Dashboard from './views/Dashboard/dashboard';
 import ExpiredCards from './views/Expiredcards/expiredCards';
 import ActiveCards from './views/Activecards/activeCards';
+import CompanyProfile from './views/companyProfile/companyProfile';
+import CreateCard from './views/createCards/createCard';
+import EditCard from './views/editCrds/editCard';
 
 
 
@@ -59,8 +62,16 @@ class App extends Component {
                 activeItem: "expiredCards"
               })
             }} className={`links w-100 ${ this.state.activeItem == 'expiredCards' ? 'active':''}`} to="/expired-cards"> <li className="py-3 px-4 items "> <i class="fas fa-history px-3  "></i>Expired Cards</li></Link>
-          <li className="py-3 px-4 "> <i class="fas fa-building px-3  "></i>Compony Profile</li>
-          <li className="py-3 px-4"> <i class="fas fa-plus-circle px-3  "></i>Create Cards</li>
+          <Link   onClick={() => {
+              this.setState({
+                activeItem: "companyProfile"
+              })
+            }} className={`links w-100 ${ this.state.activeItem == 'companyProfile' ? 'active':''}`} to="/company-profile"> <li className="py-3 px-4 "> <i class="fas fa-building px-3  "></i>Compony Profile</li></Link>
+             <Link   onClick={() => {
+              this.setState({
+                activeItem: "createCard"
+              })
+            }} className={`links w-100 ${ this.state.activeItem == 'createCard' ? 'active':''}`} to="/create-cards"> <li className="py-3 px-4"> <i class="fas fa-plus-circle px-3  "></i>Create Cards</li></Link>
           <li style={{ marginTop: '90px' }} className="py-3 px-4"> <i class="fas fa-cog px-3  "></i>Settings</li>
           <li className="py-3 px-4"> <i class="fas fa-life-ring px-3  "></i>Help</li>
 
@@ -86,11 +97,10 @@ class App extends Component {
         <Route path="/draft-cards" component={DraftCards} />
         <Route path="/expired-cards" component={ExpiredCards} />
         <Route path="/active-cards" component={ActiveCards} />
-        {/*<Route  path="/plans" component={Plans}/>
-      <Route  path="/privacy" component={Privacy}/>
-      <Route  path="/blogs" component={Blogs}/>
-      <Route  path="/blog-post" component={BlogPosts}/>
-      <Route  path="/dashboard" component={Dashboard}/> */}
+        <Route path="/company-profile" component={CompanyProfile} />
+        <Route path="/create-cards" component={CreateCard} />
+        <Route path="/edit-card" component={EditCard} />
+       
 
         {/* footer */}
       </div>

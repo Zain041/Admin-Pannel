@@ -23,7 +23,7 @@ export default class DraftCard extends Component {
 
                         </Col>
                         <Col md={6} sm={12}>
-                            <Card className="card-wrapper">
+                            <Card className="card-wrapper shadow-sm rounded">
                                 <CardImg top className="card-img" src="https://via.placeholder.com/80" alt="Card image cap" />
                                 <CardBody>
                                     <div className="card-img-2"></div>
