@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Col, Row, Card, Button, CardImg, CardBody } from 'reactstrap'
 import '../../assets/css/ExpiredCards.css'
+import Datepickers from '../datepicker/dashboardDatePicker'
 
 export default class ExpiredCard extends Component {
   
@@ -26,7 +27,7 @@ export default class ExpiredCard extends Component {
 
                         </Col>
                         <Col md={4} sm={12}>
-                            <p className="text-secondary">Date range <span style={{color:'#7F48F7'}}>This week <i class="fas fa-sort-down text-secondary"></i></span></p>
+                            <p className="text-secondary">Date range <span style={{color:'#7F48F7'}}><Datepickers/><i class="fas fa-sort-down text-secondary"></i></span></p>
                            
                            <div className="d-flex">
                                 <span className="box rounded">

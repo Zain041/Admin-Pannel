@@ -41,7 +41,7 @@ class App extends Component {
                 <i class="fas fa-times text-white fa-lg"></i>
               </div>
               <h3 className="logo text-center ">Logo</h3>
-              <ul className="pl-0 ml-0">
+              <ul className="pl-0 fw-bold ml-0">
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "dashboard"

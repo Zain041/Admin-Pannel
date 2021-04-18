@@ -1,0 +1,8 @@
+input[type="text"]{
+    padding:3px;
+    width: 55px !important;
+font-size: 8px !important;
+font-weight: 800 !important;
+border:transparent !important;
+cursor:pointer;
+}

@@ -19,10 +19,10 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData('Text Card Title Goes Here', "$159", 6.0, 24, 4.0),
-  createData('Text Card Title Goes Here', "$237", 9.0, 37, 4.3),
-  createData('Text Card Title Goes Here', "$262", 16.0, 24, 6.0),
-  createData('Text Card Title Goes Here', "$305", 3.7, 67, 4.3),
+  createData('Text Card Title Goes Here', "$159",   3.7,4.3, 24, ),
+  createData('Text Card Title Goes Here', "$237",  4.0,6.0, 24),
+  createData('Text Card Title Goes Here', "$262", 4.3,9.0, 37),
+  createData('Text Card Title Goes Here', "$305", 6.0 ,16.0, 67 ),
 
 ];
 
@@ -34,11 +34,11 @@ export default function BasicTable() {
       <Table className={classes.table} aria-label="simple table">
         <TableHead style={{backgroundColor: '#f2f4f5'}}>
           <TableRow>
-            <TableCell><b>Deal</b></TableCell>
-            <TableCell align="left"><b>Price</b>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
-            <TableCell align="left"><b>Exposure</b>    <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
-            <TableCell align="left"><b>Opens</b>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
-            <TableCell align="left"><b>Engagments</b>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
+            <TableCell><span style={{fontWeight:'600'}}>Deal</span></TableCell>
+            <TableCell align="left"><span  style={{fontWeight:'600'}}>Price</span>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
+            <TableCell align="left"><span  style={{fontWeight:'600'}}>Exposure</span>    <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
+            <TableCell align="left"><span  style={{fontWeight:'600'}}>Opens </span>  <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
+            <TableCell align="left"><span  style={{fontWeight:'600'}}>Engagments</span>   <span clasName="text-secondary" style={{ fontSize: '8px', opacity: '0.5' }}><i class="fas ps-2 fa-caret-down"></i><i style={{ position: 'absolute', marginLeft: '-13px', marginTop: '5px' }} class="fas ps-2 fa-caret-up"></i></span></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

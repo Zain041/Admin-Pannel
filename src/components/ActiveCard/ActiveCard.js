@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Col, Row, Card, Button, CardImg, CardBody } from 'reactstrap'
 import '../../assets/css/ActiveCards.css'
 import {Link } from 'react-router-dom'
+import Datepickers from '../datepicker/dashboardDatePicker'
+import CardDropdown from '../select/selectCard'
 
 export default class ActiveCard extends Component {
     render() {
@@ -14,7 +16,7 @@ export default class ActiveCard extends Component {
                             <p className="text-secondary">Subtitle post listing description</p>
                             <p className="mb-0">Expiry:-</p><br></br>
 
-                            <p className="  text-secondary "> <i class="fas text-success fa-circle "></i> Draft <i class="fas fa-sort-down"></i></p>
+                            <p className="  text-secondary "> <i class="fas text-success fa-circle "></i> <CardDropdown/></p>
                             <h6>Price:$4.00</h6>
 
 
@@ -25,7 +27,7 @@ export default class ActiveCard extends Component {
 
                         </Col>
                         <Col md={4} sm={12}>
-                            <p className="text-secondary">Date range <span style={{color:'#7F48F7'}}>This week <i class="fas fa-sort-down text-secondary"></i></span></p>
+                            <p className="text-secondary">Date range <span style={{color:'#7F48F7'}}><Datepickers/> <i class="fas fa-sort-down text-secondary"></i></span></p>
                            
                            <div className="d-flex">
                                 <span className="box rounded">
