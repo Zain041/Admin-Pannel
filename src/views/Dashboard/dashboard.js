@@ -101,17 +101,17 @@ export default class Dashboard extends Component {
                                                     </div>
                                                 </Col>
                                                 <Col md={3}>
-                                                    <div className="pt-2">
-                                                        <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">FROM</span>
-                                                        <span style={{ fontSize: '11px', fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>
-                                                    </div>
-                                                </Col>
-                                                <Col md={3}>
-                                                    <div className="pt-2">
-                                                        <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">TO</span>
-                                                        <span style={{ fontSize: '11px', fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>
-                                                    </div>
-                                                </Col>
+                                            <div className="pt-2">
+                                                <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">FROM</span>
+                                                <span style={{ fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>
+                                            </div>
+                                        </Col>
+                                        <Col md={3}>
+                                            <div className="pt-2">
+                                                <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">TO</span>
+                                                <span style={{ fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>
+                                            </div>
+                                        </Col>
                                             </Row>
                                         </CardHeader>
                                         <LineChart />
