@@ -93,20 +93,20 @@ export default class Dashboard extends Component {
                                         <CardHeader className="bg-white">
 
                                             <Row>
-                                                <Col md={8}>
+                                                <Col md={6}>
                                                     <h6 className=" ">DASHBOARD</h6>
                                                     <div style={{ marginTop: '-12px' }}>
                                                         <span clasName="text-secondary" style={{ fontSize: '8px' }}>Total Engagments <i class="fas ps-2 fa-caret-down"></i></span>
                                                         <span className="ps-3 text-secondary" style={{ fontSize: '8px' }}>All Cards <i class="fas ps-2 fa-caret-down"></i></span>
                                                     </div>
                                                 </Col>
-                                                <Col md={2}>
+                                                <Col md={3}>
                                                     <div className="pt-2">
                                                         <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">FROM</span>
                                                         <span style={{ fontSize: '11px', fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>
                                                     </div>
                                                 </Col>
-                                                <Col md={2}>
+                                                <Col md={3}>
                                                     <div className="pt-2">
                                                         <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">TO</span>
                                                         <span style={{ fontSize: '11px', fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>
@@ -158,16 +158,16 @@ export default class Dashboard extends Component {
                             <Card>
                                 <CardHeader className="bg-white">
                                     <Row>
-                                        <Col md={8}>
+                                        <Col md={6}>
                                             <h6 className="fw-bold pt-2">CARD PERFORMANCE</h6>
                                         </Col>
-                                        <Col md={2}>
+                                        <Col md={3}>
                                             <div className="pt-2">
                                                 <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">FROM</span>
                                                 <span style={{ fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>
                                             </div>
                                         </Col>
-                                        <Col md={2}>
+                                        <Col md={3}>
                                             <div className="pt-2">
                                                 <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">TO</span>
                                                 <span style={{ fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>
