@@ -49,7 +49,7 @@ export default class Dashboard extends Component {
                             </div>
                         </div>
 
-                        <Col className="pt-5" md={9}>
+                        <Col className="pt-5" lg={8}>
                             <Row>
                                 <Col className="ps-0 pt-2" md={4}>
                                     <Card>
@@ -123,7 +123,7 @@ export default class Dashboard extends Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col style={{ paddingTop: '55px' }} className="ps-0  " md={3}>
+                        <Col style={{ paddingTop: '55px' }} className="ps-0" lg={4}>
                             <Card>
                                 <div className="p-3">
                                     <h2 style={{ paddingTop: '45px', paddingBottom: '45px' }} className=" text-center text-danger   fw-bold">
@@ -153,14 +153,14 @@ export default class Dashboard extends Component {
                                             </div>
                                             <div className="star">
                                                 <i style={{ color: '#F2D338' }} class="fas fa-star"></i>
-                                                <span><b>4.2</b> <br></br> &nbsp;&nbsp;KM</span>
+                                                <span><b>4.2</b> <br></br> &nbsp;&nbsp;<span className="fw-normal">KM</span></span>
                                             </div>
                                         </CardBody>
                                     </Card>
                                 </div>
                             </Card>
                         </Col>
-                        <Col className="pt-3 ps-0 " md={9} >
+                        <Col className="pt-3 ps-0 " lg={8}>
                             <Card>
                                 <CardHeader className="bg-white">
                                     <Row>
@@ -186,7 +186,7 @@ export default class Dashboard extends Component {
 
                             </Card>
                         </Col>
-                        <Col className="ps-0 pt-3" md={3} >
+                        <Col className="ps-0 pt-3" lg={4} >
                             <Card style={{ position: 'relative' }} className="">
                                 <CardHeader>
                                     <h6 className="fw-bold ">PERFORMANCE BY DAY</h6>

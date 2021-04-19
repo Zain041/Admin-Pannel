@@ -68,7 +68,7 @@ export default class ExpiredCard extends Component {
                                     </div>
                                     <div style={{}} className="star">
                                         <i style={{ color: '#F2D338' }} class="fas fa-star"></i>
-                                        <span>4.2 <br></br> &nbsp;&nbsp;KM</span>
+                                        <span>4.2 <br></br> &nbsp;&nbsp;<span className="fw-normal">KM</span></span>
                                     </div>
                                 </CardBody>
                             </Card>

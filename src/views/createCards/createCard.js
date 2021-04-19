@@ -36,7 +36,7 @@ export default class CreateCard extends Component {
                         <div className="col-md-12 d-flex ">
                             <div>
                                 <h3 className="header-heading ">Create Card</h3>
-                                <span style={{color: '#414A4B', fontWeight: '600'}} className="">January 17, 2021</span>
+                                <span style={{ color: '#414A4B', fontWeight: '600' }} className="">January 17, 2021</span>
                             </div>
                             <div className="header-right">
                                 <span style={{ cursor: 'pointer' }} onClick={this.handleAccount} className="avatar">JD</span>
@@ -44,18 +44,17 @@ export default class CreateCard extends Component {
                                 <span style={{ cursor: 'pointer' }} onClick={this.handleNotification} class="badge bg-danger">9</span>
                             </div>
                         </div>
-                        <div className="col-lg-10 col-md-10 col-sm-12">
+                        <div className="col-lg-10 col-md-12 col-sm-12">
                             <Card className="section-card shadow-sm rounded mt-5 ">
-                                <Row className="position-relative">
-                                    <Col md={{ size: '11', offset: 1 }}>
+                                <Row>
+                                    <Col md={{ size: 12 }}>
                                         <h6 className="fw-bold p-3">New Card</h6>
                                         <Label style={{ fontSize: '14px', color: '#7F48F7' }} className="ps-3">Limit Post</Label ><span className="icon-bolt"><i class="fas fa-xs text-secondary fa-bolt"></i></span>
                                         <Switches />
-
                                     </Col>
-                                    <Col className="mb-3" md={11}>
+                                    <Col className="mb-3" lg={12} md={12}>
                                         <Row>
-                                            <Col style={{ borderRight: '2px solid #d7dad7' }} md={{ size: '6', offset: 1 }}>
+                                            <Col style={{ borderRight: '2px solid #d7dad7' }} md={{ size: 6 }}>
                                                 <Label style={{ fontSize: '14px' }} className="ps-4">Headr Title</Label >
                                                 <Input style={{ backgroundColor: '#F5F6F7' }} type="text" className="mb-3 input-field ms-4 mt-1" />
                                                 <Label style={{ fontSize: '14px' }} className="ps-4">Subtitle</Label >
@@ -83,9 +82,9 @@ export default class CreateCard extends Component {
                                                 <Button className="bg-transparent button text-dark publish button border border-none ms-4 mb-md-0 mb-sm-2  ">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-upload"></i> </Button>
                                                 <Button className="bg-transparent button text-dark publish button border border-none   ">Save as Drafr&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-wrench"></i> </Button>
                                             </Col>
-                                            <Col md={5}>
+                                            <Col md={4} className="mx-auto">
                                                 <h6 className="fw-bold mt-2 text-center">Live Preview</h6>
-                                                <Card className="card-wrapper ms-4 me-2 shadow-sm rounded">
+                                                <Card className="card-wrapper mx-2 shadow-sm rounded">
                                                     <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>
@@ -99,20 +98,20 @@ export default class CreateCard extends Component {
                                                         </div>
                                                         <div style={{}} className="star">
                                                             <i style={{ color: '#F2D338' }} class="fas fa-star"></i>
-                                                            <span>4.2 <br></br> &nbsp;&nbsp;KM</span>
+                                                            <span> 4.2 <br></br> &nbsp;&nbsp; <span className="fw-normal">KM</span></span>
                                                         </div>
                                                     </CardBody>
                                                 </Card>
-                                                <Card className="card-wrapper ms-4 me-2 shadow-sm rounded">
+                                                <Card className="card-wrapper me-2 shadow-sm rounded">
                                                     <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>
                                                         <span className="dollar ">$4</span>
                                                         <div style={{ lineHeight: '80%', marginTop: '1.25rem' }}>
                                                             <span className="card-heading" >Title Card Listing</span><br></br>
-                                                            <span className="card-sub-description" >Remax [comapnay name]</span> <span style={{fontSize: 'small', fontWeight: 'bold', color: '#7f48f8'}}> <i style={{ color: '#F2D338' }} class="fas fa-star"></i> <span>4.2</span></span>
-                                                            <p className="mx-5 mt-1" style={{fontSize: 'x-small'}}>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel arcu orci. Mauris maximus arcu sit amet enim imperdiet, non tempor velit pretium.
+                                                            <span className="card-sub-description" >Remax [comapnay name]</span> <span style={{ fontSize: 'small', fontWeight: 'bold', color: '#7f48f8' }}> <i style={{ color: '#F2D338' }} class="fas fa-star"></i> <span>4.2</span></span>
+                                                            <p className="ms-5 mt-1" style={{ fontSize: 'x-small' }}>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel arcu orci. Mauris maximus arcu sit amet enim imperdiet, non tempor velit pretium.
                                                             </p>
                                                         </div>
                                                     </CardBody>

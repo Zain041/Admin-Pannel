@@ -10,7 +10,7 @@ export default class ActiveCard extends Component {
     render() {
         return (
             <>
-                <Card className=" section-card shadow-sm  mt-4">
+                <Card className="section-card shadow-sm  mt-4">
                     <Row className="p-4">
                         <Col md={4} sm={12}>
                             <h3>Title post Listing</h3>
@@ -61,7 +61,7 @@ export default class ActiveCard extends Component {
                                 <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                 <CardBody>
                                     <div className="card-img-2"></div>
-                                    <span className="dollar ">$4</span>
+                                    <span className="dollar">$4</span>
                                     <div style={{ lineHeight: '80%' }}>
 
                                         <span className="card-heading" >Title Card Listing</span><br></br>
@@ -71,7 +71,7 @@ export default class ActiveCard extends Component {
                                     </div>
                                     <div style={{}} className="star">
                                         <i style={{ color: '#F2D338' }} class="fas fa-star"></i>
-                                        <span>4.2 <br></br> &nbsp;&nbsp;KM</span>
+                                        <span>4.2 <br></br> &nbsp;&nbsp;<span className="fw-normal">KM</span></span>
                                     </div>
                                 </CardBody>
                             </Card>

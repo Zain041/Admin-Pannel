@@ -18,7 +18,7 @@ html {
 }
 
 .wrapper {
-    padding-left: 60px;
+    padding-left: 50px;
     width: full;
     overflow-x: hidden;
     overflow-y: auto !important;
@@ -83,7 +83,7 @@ html {
 
 .card-wrapper {
     margin-top: 20px;
-    border-radius: 20px;
+    border-radius: 20px !important;
     overflow:hidden;
 }
 
@@ -92,6 +92,7 @@ html {
     height: 40px;
     text-align: center;
     background-color: #7F48F7;
+    font-weight: bold !important;
     color: white;
     border-radius: 100%;
     position: absolute;
@@ -106,6 +107,7 @@ html {
     float: right;
     margin-top: -50px;
     font-size: small;
+    font-weight: bold;
     color: #7F48F7;
 }
 

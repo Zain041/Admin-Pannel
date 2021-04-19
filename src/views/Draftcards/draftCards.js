@@ -39,13 +39,11 @@ export default class DraftCards extends Component {
                                 <span style={{cursor:'pointer'}} onClick={this.handleNotification} class="badge bg-danger">9</span>
                             </div>
                         </div>
-                        <div className="col-lg-10 col-md-10 colsm-12">
+                        <div className="col-lg-9 col-sm-12">
                             <DraftCard />
-
                         </div>
-                        <div className="col-lg-10 col-md-10 col-sm-12">
+                        <div className="col-lg-9 col-sm-12">
                             <DraftCard />
-
                         </div>
                         <Notification notificationOpen={this.state.notificationOpen} onClick={this.handleNotification}/>
                         <Account accountOpen={this.state.accountOpen} onClick={this.handleAccount}/>
