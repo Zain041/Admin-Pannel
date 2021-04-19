@@ -1,42 +1,46 @@
-.notification-header{
+.notification-header {
     background-color: #7F48F7;
-    color:white;
-    
-   
+    color: white;
+
+
 }
-.notification-wrapper{
+
+.notification-wrapper {
     padding-left: 0px !important;
     margin-left: 0%;
-    height:100vh;
-    position:fixed;
-    top:0;
-    right:0;
-    z-index:5000;
-    width:300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5000;
+    width: 375px;
     margin-right: 0px;
     padding-right: 0px;
     background-color: white;
 
 }
-.cross-icon{
-    position:relative;
+
+.cross-icon {
+    position: relative;
     right: 0;
-    top:0;
+    top: 0;
     margin-top: 8px;
-    padding:10px;
-    float:right;
+    padding: 10px;
+    float: right;
     margin-left: 90px;
-    cursor:pointer
+    cursor: pointer
 }
-.notification-text{
-  color:white;
-  font-size: x-large;
+
+.notification-text {
+    color: white;
+    font-size: x-large;
     margin-top: 10px;
     padding-left: 15px;
 }
-.circle-icon{
-    height:50px;
-    width:50px;
+
+.circle-icon {
+    height: 50px;
+    width: 50px;
     position: absolute;
     border-radius: 100%;
     text-align: center;
@@ -45,28 +49,35 @@
     padding-top: 15px;
     background-color: #3F3F3F;
 }
-.date{
-    float:right;
+
+.date {
+    float: right;
     margin-top: -130px;
-    font-size: small;
-   
-    margin-right: 10px;
+    margin-right: 25px !important;
+    font-size: smaller !important;
 }
-.status{
-    margin-left: 50px;
-    font-size: 10px;
-    margin-bottom:-30px;
-    margin-bottom: 0%;
-    padding-bottom: 0px;
-}
-.notification-title{
+
+
+.status {
     margin-left: 50px;
     font-size: 10px;
     font-weight: 500;
+    margin-bottom: -30px;
+    margin-bottom: 0%;
+    padding-bottom: 0px;
 }
-.notification-description{
+
+.notification-title {
     margin-left: 50px;
     font-size: 10px;
+    font-weight: 600;
+}
+
+.notification-description {
+    margin-left: 50px;
+    font-size: 10px;
+    line-height: 1.5;
+    margin-right: 35px !important;
     padding-right: 10px;
 
 }
