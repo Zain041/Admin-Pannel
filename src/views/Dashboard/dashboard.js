@@ -8,6 +8,10 @@ import DatePickers from '../../components/datepicker/dashboardDatePicker';
 import LineChart from '../../components/linechart/linechart';
 import Charts from '../../components/linechart/linechart';
 import Notification from '../../components/Notifications/notification'
+import Engagement from '../../components/select/Engagement';
+import FilterbyCards from '../../components/select/FilterbyCards';
+import FilterMonth from '../../components/select/FilterMonth';
+import SortCards from '../../components/select/SortCards';
 import BasicTable from '../../components/table/table';
 
 export default class Dashboard extends Component {
@@ -31,17 +35,17 @@ export default class Dashboard extends Component {
     render() {
         return (
             <>
-                <Container fluid>
+                <div className="container wrapper">
                     <Row>
                         <div className="col-md-12 d-flex ">
                             <div>
-                                <h3 style={{ fontWeight: '800' }} className="header-heading ">Dashboard</h3>
-                                <span className="">January 17,2021</span>
+                                <h3 className="header-heading">Dashboard</h3>
+                                <span style={{color: '#414A4B', fontWeight: '600'}} className="">January 17, 2021</span>
                             </div>
                             <div className="header-right">
-                                <span style={{ cursor: 'pointer' }} onClick={this.handleAccount} className="avatar ">JD</span>
-                                <span style={{ cursor: 'pointer' }} onClick={this.handleNotification}><i class="fas fa-lg fa-bell text-secondary"></i></span>
-                                <span style={{ cursor: 'pointer' }} onClick={this.handleNotification} class="badge   bg-danger">9</span>
+                                <span style={{ cursor: 'pointer' }} onClick={this.handleAccount} className="avatar">JD</span>
+                                <span style={{ cursor: 'pointer' }} onClick={this.handleNotification}><i class="fas fa-lg fa-bell" style={{ color: '#0A0E0D' }}></i></span>
+                                <span style={{ cursor: 'pointer' }} onClick={this.handleNotification} class="badge bg-danger">9</span>
                             </div>
                         </div>
 
@@ -51,8 +55,8 @@ export default class Dashboard extends Component {
                                     <Card>
                                         <div className="p-3 card-bg bg-exposure">
                                             <h6 style={{ fontWeight: '800' }} className="pb-0 mb-0 ">EXPOSURE</h6>
-                                            <span style={{ fontSize: '10px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January,2021</span>
-                                            <p style={{ fontWeight: '700', fontSize: 'large' }} className="">8514</p>
+                                            <span style={{ fontSize: '10px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January, 2021</span>
+                                            <p style={{ fontWeight: '700', fontSize: 'large' }} className="mt-2">8514</p>
                                             <span style={{ color: '#7F48F7', fontWeight: '500' }} > 56% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
                                             <i style={{ float: 'right', marginTop: '-90px' }} class="fas opacity-3 dots text-secondary fa-ellipsis-h"></i>
                                         </div>
@@ -64,8 +68,8 @@ export default class Dashboard extends Component {
                                     <Card>
                                         <div className="p-3 card-bg bg-open-card">
                                             <h6 style={{ fontWeight: '800' }} className="pb-0 mb-0 ">CARD OPENS</h6>
-                                            <span style={{ fontSize: '10px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January,2021</span>
-                                            <p style={{ fontWeight: '700', fontSize: 'large' }} className="">8514</p>
+                                            <span style={{ fontSize: '10px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January, 2021</span>
+                                            <p style={{ fontWeight: '700', fontSize: 'large' }} className="mt-2">8514</p>
                                             <span style={{ color: '#7F48F7', fontWeight: '500' }} > 74% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
                                             <i style={{ float: 'right', marginTop: '-90px' }} class="fas dots opacity-3 text-secondary fa-ellipsis-h"></i>
                                         </div>
@@ -77,8 +81,8 @@ export default class Dashboard extends Component {
                                     <Card style={{ backgroundColor: '#7F48F7', color: 'white' }}>
                                         <div className="p-3 card-bg bg-saved-card">
                                             <h6 style={{ fontWeight: '800' }} className="pb-0 mb-0 ">SAVED CARDS</h6>
-                                            <span style={{ fontSize: '10px', marginTop: '-10px', fontWeight: '500' }} className="text-white">From January,2021</span>
-                                            <p style={{ fontWeight: '700', fontSize: 'large' }} className="">23</p>
+                                            <span style={{ fontSize: '10px', marginTop: '-10px', fontWeight: '500' }} className="text-white">From January, 2021</span>
+                                            <p style={{ fontWeight: '700', fontSize: 'large' }} className="mt-2">23</p>
                                             <span style={{ fontWeight: '500' }}  > 3.9% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
                                             <i style={{ float: 'right', marginTop: '-90px' }} class="fas   fa-ellipsis-h"></i>
                                             {/* <i style={{float:'right'}} class="far fa-3x fa-heart "></i> */}
@@ -96,8 +100,8 @@ export default class Dashboard extends Component {
                                                 <Col md={6}>
                                                     <h6 className=" ">DASHBOARD</h6>
                                                     <div style={{ marginTop: '-12px' }}>
-                                                        <span clasName="text-secondary" style={{ fontSize: '8px' }}>Total Engagments <i class="fas ps-2 fa-caret-down"></i></span>
-                                                        <span className="ps-3 text-secondary" style={{ fontSize: '8px' }}>All Cards <i class="fas ps-2 fa-caret-down"></i></span>
+                                                        <Engagement selected="Total Engagement" />
+                                                        <SortCards selected="All Cards" />
                                                     </div>
                                                 </Col>
                                                 <Col md={3}>
@@ -122,19 +126,21 @@ export default class Dashboard extends Component {
                         <Col style={{ paddingTop: '55px' }} className="ps-0  " md={3}>
                             <Card>
                                 <div className="p-3">
-                                    <h2 style={{ paddingTop: '70px', paddingBottom: '70px' }} className=" text-center text-danger   fw-bold">REMAX</h2>
+                                    <h2 style={{ paddingTop: '45px', paddingBottom: '45px' }} className=" text-center text-danger   fw-bold">
+                                        <img width="100%" src={require('../../assets/re-max.jpg').default} alt="Logo" />
+                                    </h2>
                                 </div>
-                                <div className="p-3 pb-1 pt-1" style={{ backgroundColor: '#7F48F7', color: 'white' }}>
+                                <div className="p-3 py-2" style={{ backgroundColor: '#7F48F7', color: 'white' }}>
                                     <h6 className="pb-0 mb-0 fw-bold">MOST POPULAR CARD</h6>
-                                    <span style={{ fontSize: '8px', marginTop: '-10px' }} className="">From January,2021</span>
+                                    <p style={{ fontSize: 'x-small' }} className="mb-0">From January, 2021</p>
                                 </div>
                                 <div className="p-4 pb-2 pt-2 d-flex" style={{ backgroundColor: '#B2B4B3', color: 'white' }}>
                                     <h6 className="pb-0 mb-0 fw-bold">375</h6>
-                                    <span style={{ fontSize: '10px', marginLeft: '5px' }} className="">Opens</span>
+                                    <span style={{ fontSize: '10px', marginLeft: '5px' }} className="mt-1">Opens</span>
                                 </div>
                                 <div className="p-3 pt-2">
                                     <Card className="card-wrapper pt-0">
-                                        <CardImg top className="card-img" src="https://via.placeholder.com/80" alt="Card image cap" />
+                                        <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                         <CardBody>
                                             <div className="card-img-2"></div>
                                             <span className="dollar ">$<b>4</b></span>
@@ -185,8 +191,8 @@ export default class Dashboard extends Component {
                                 <CardHeader>
                                     <h6 className="fw-bold ">PERFORMANCE BY DAY</h6>
                                     <div style={{ marginTop: '-12px' }}>
-                                        <span clasName="text-secondary" style={{ fontSize: '8px' }}>Total Card Opens <i class="fas ps-2 fa-caret-down"></i></span>
-                                        <span className="ps-3 text-secondary" style={{ fontSize: '8px' }}>Months <i class="fas ps-2 fa-caret-down"></i></span>
+                                        <FilterbyCards selected="Total Card Open" />
+                                        <FilterMonth selected="Months" />
                                     </div>
 
                                 </CardHeader>
@@ -196,7 +202,7 @@ export default class Dashboard extends Component {
                     </Row>
                     <Notification notificationOpen={this.state.notificationOpen} onClick={this.handleNotification} />
                     <Account accountOpen={this.state.accountOpen} onClick={this.handleAccount} />
-                </Container>
+                </div>
             </>
         )
     }

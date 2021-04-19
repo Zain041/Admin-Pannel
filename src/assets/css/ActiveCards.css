@@ -51,9 +51,10 @@
 .card-img-2{
     height:50px;
     width:50px;
-    background-image: url('https://via.placeholder.com/80');
+    background-image: url(../re-max.jpg);
+    background-color: white;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat:no-repeat;
     border:2px solid black;
     

@@ -31,6 +31,9 @@ export default class LineChart extends Component {
             legend: { position: 'none' },
             chartArea: { 'width': '85%', 'height': '75%' },
             smoothLine: true,
+            tooltip: {
+              isHtml: true
+            },
             hAxis: {
               gridlines: {
                 count: 0

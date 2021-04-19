@@ -14,15 +14,15 @@ export default class ActiveCard extends Component {
                     <Row className="p-4">
                         <Col md={4} sm={12}>
                             <h3>Title post Listing</h3>
-                            <p className="text-secondary">Subtitle post listing description</p>
-                            <p className="mb-0">Expiry:-</p><br></br>
-                            <p className="  text-secondary "> <i class="fas fa-circle " style={{ color: '#00dc54' }}></i> <CardDropdown selected="Active" /> </p>
+                            <p className="text-secondary" style={{fontSize: '14px'}}>Subtitle post listing description</p>
+                            <p className="mb-0" style={{fontWeight: '500', fontSize: '14px'}}>Expiry:-</p><br></br>
+                            <p className="  text-secondary "> <CardDropdown selected="Active" /> </p>
                             <h6>Price:$4.00</h6>
 
 
                             <div class="button-section">
-                                <Link to="/edit-card"><Button className="bg-transparent button text-dark border border-none  "><i class="far fa-edit"></i> Edit</Button></Link>
-                                <Button className="bg-transparent button text-dark border border-none"><i class="far fa-trash-alt"></i> Delete</Button>
+                                <Button className="bg-transparent text-dark border border-none  "><i class="fas fa-edit"></i> Edit</Button>
+                                <Button className="bg-transparent text-dark border border-none"><i class="fas fa-trash-alt"></i> Delete</Button>
                             </div>
 
                         </Col>
@@ -58,7 +58,7 @@ export default class ActiveCard extends Component {
                         <Col md={4} sm={12}>
 
                             <Card className="card-wrapper shadow-sm rounded">
-                                <CardImg top className="card-img" src="https://via.placeholder.com/80" alt="Card image cap" />
+                                <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                 <CardBody>
                                     <div className="card-img-2"></div>
                                     <span className="dollar ">$4</span>

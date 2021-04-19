@@ -36,12 +36,12 @@ export default class CreateCard extends Component {
                         <div className="col-md-12 d-flex ">
                             <div>
                                 <h3 className="header-heading ">Create Card</h3>
-                                <span className="">January 17,2021</span>
+                                <span style={{color: '#414A4B', fontWeight: '600'}} className="">January 17, 2021</span>
                             </div>
                             <div className="header-right">
-                                <span style={{ cursor: 'pointer' }} onClick={this.handleAccount} className="avatar ">JD</span>
-                                <span style={{ cursor: 'pointer' }} onClick={this.handleNotification}><i class="fas fa-lg fa-bell text-secondary"></i></span>
-                                <span style={{ cursor: 'pointer' }} onClick={this.handleNotification} class="badge   bg-danger">9</span>
+                                <span style={{ cursor: 'pointer' }} onClick={this.handleAccount} className="avatar">JD</span>
+                                <span style={{ cursor: 'pointer' }} onClick={this.handleNotification}><i class="fas fa-lg fa-bell" style={{ color: '#0A0E0D' }}></i></span>
+                                <span style={{ cursor: 'pointer' }} onClick={this.handleNotification} class="badge bg-danger">9</span>
                             </div>
                         </div>
                         <div className="col-lg-10 col-md-10 col-sm-12">
@@ -77,7 +77,7 @@ export default class CreateCard extends Component {
                                                     <SimpleSelect label="Days" />
                                                 </div>
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Header Image </Label ><br></br>
-                                                <img className="ps-4" height="100" width="300" src="https://via.placeholder.com/80" />
+                                                <img className="ps-4" height="100" width="300" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" />
                                                 <Label style={{ fontSize: '14px', border: '1px solid #d7dad7', borderRadius: '4px', fontWeight: '500', cursor: 'pointer' }} className="ms-4 p-2 mt-4 mb-1"> <input className="d-none" type="file" />Select From Gallery&nbsp; <i style={{ color: '#7F48F7' }} class="far fa-edit"></i> </Label ><br></br>
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Publish Card </Label ><br></br>
                                                 <Button className="bg-transparent button text-dark publish button border border-none ms-4 mb-md-0 mb-sm-2  ">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-upload"></i> </Button>
@@ -86,7 +86,7 @@ export default class CreateCard extends Component {
                                             <Col md={5}>
                                                 <h6 className="fw-bold mt-2 text-center">Live Preview</h6>
                                                 <Card className="card-wrapper ms-4 me-2 shadow-sm rounded">
-                                                    <CardImg top className="card-img" src="https://via.placeholder.com/80" alt="Card image cap" />
+                                                    <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>
                                                         <span className="dollar ">$4</span>
@@ -104,7 +104,7 @@ export default class CreateCard extends Component {
                                                     </CardBody>
                                                 </Card>
                                                 <Card className="card-wrapper ms-4 me-2 shadow-sm rounded">
-                                                    <CardImg top className="card-img" src="https://via.placeholder.com/80" alt="Card image cap" />
+                                                    <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>
                                                         <span className="dollar ">$4</span>

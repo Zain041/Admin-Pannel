@@ -16,9 +16,7 @@ const FilterDateRange = (props) => {
                 className="custom-select-mui"
                 defaultValue={10}
                 inputProps={{ 'aria-label': 'Without label', disableUnderline: true }}>
-                <MenuItem value="">
-                    <em>None</em>
-                </MenuItem>
+
                 <MenuItem value={10}>This Week</MenuItem>
                 <MenuItem value={20}>This Month</MenuItem>
                 <MenuItem value={30}>This Year</MenuItem>
