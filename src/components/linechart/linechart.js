@@ -36,7 +36,7 @@ export default class LineChart extends Component {
             [19, 100, returnToolTip(19100, '01/15/2020')],
             [20, 600, returnToolTip(20600, '01/15/2020')],
           ]}
-          
+
           options={{
             colors: ['#7F48F7'],
             curveType: 'function',
@@ -46,6 +46,9 @@ export default class LineChart extends Component {
             tooltip: {
               isHtml: true, trigger: "visible"
             },
+            fontName: "Montserrat",
+            bold: true,
+            italic: false,
             hAxis: {
               title: 'X-axis',
               gridlines: {
@@ -55,6 +58,7 @@ export default class LineChart extends Component {
                 min: 1,
                 max: 15
               },
+
             },
             vAxis: {
               title: 'Y-axis',
