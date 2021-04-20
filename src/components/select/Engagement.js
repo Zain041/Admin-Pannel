@@ -6,8 +6,8 @@ const Engagement = (props) => {
         <FormControl>
             <Select
                 displayEmpty
-                style={{ fontSize: 'x-small' }}
-                className="p-0 m-0 custom-select-mui text-secondary"
+                style={{ fontSize: '9px' }}
+                className="p-0  m-0 custom-select-mui text-secondary"
                 defaultValue={props.selected}
                 inputProps={{ 'aria-label': 'Without label', disableUnderline: true }}>
                 <MenuItem value={'Total Engagement'}>Total Engagement</MenuItem>

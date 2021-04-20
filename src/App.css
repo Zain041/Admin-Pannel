@@ -29,13 +29,16 @@ html {
 }
 
 .logo {
-    padding: 30px;
-    font-weight: 600;
+    padding: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .sidebar>ul>li:hover {
-    background-color: white;
-    color: #7F48F7;
+    background-color: #9361FF;
+    color:white ;
 }
 
 
@@ -56,8 +59,8 @@ html {
 }
 
 .links:hover li {
-    background-color: white !important;
-    color: #7F48F7;
+    background-color: #9361FF;
+    color:white ;
 
 }
 

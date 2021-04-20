@@ -48,13 +48,13 @@ export default class CreateCard extends Component {
                             <Card className="section-card shadow-sm rounded mt-5 ">
                                 <Row>
                                     <Col md={{ size: 12 }}>
-                                        <h6 className="fw-bold p-3">New Card</h6>
-                                        <Label style={{ fontSize: '14px', color: '#7F48F7' }} className="ps-3">Limit Post</Label ><span className="icon-bolt"><i class="fas fa-xs text-secondary fa-bolt"></i></span>
+                                        <h6 style={{marginLeft:'60px'}} className="fw-bold p-3 ps-3">New Card</h6>
+                                        <Label style={{ fontSize: '14px', color: '#7F48F7',marginLeft:'60px' }} className="ps-3">Limit Post</Label ><span className="icon-bolt"><i class="fas fa-xs text-secondary fa-bolt"></i></span>
                                         <Switches />
                                     </Col>
                                     <Col className="mb-3" lg={12} md={12}>
                                         <Row>
-                                            <Col style={{ borderRight: '2px solid #d7dad7' }} md={{ size: 6 }}>
+                                            <Col style={{ borderRight: '2px solid #d7dad7',marginLeft:'50px' }} className="" md={{ size: 6 }}>
                                                 <Label style={{ fontSize: '14px' }} className="ps-4">Headr Title</Label >
                                                 <Input style={{ backgroundColor: '#F5F6F7' }} type="text" className="mb-3 input-field ms-4 mt-1" />
                                                 <Label style={{ fontSize: '14px' }} className="ps-4">Subtitle</Label >

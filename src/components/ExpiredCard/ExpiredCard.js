@@ -27,8 +27,9 @@ export default class ExpiredCard extends Component {
 
                         </Col>
                         <Col md={4} sm={12}>
-                            <p className="text-secondary">Date range
-                                <span style={{ color: '#7F48F7' }}> <FilterDateRange /> </span>
+                        <p className="text-secondary d-flex align-items-center">
+                                <span>Date range</span>
+                                <span className="ms-2" style={{ color: '#7F48F7' }}> <FilterDateRange /> </span>
                             </p>
 
                             <div className="d-flex">

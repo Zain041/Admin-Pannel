@@ -79,7 +79,8 @@ export default function Switches() {
     <FormGroup>
      
       <FormControlLabel 
-      className="ms-2"
+      style={{marginLeft:'65px'}}
+      className=""
         control={<IOSSwitch checked={state.checkedB} onChange={handleChange} name="checkedB" />}
         label=""
       />

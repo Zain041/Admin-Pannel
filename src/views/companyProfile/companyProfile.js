@@ -68,7 +68,7 @@ export default class CompanyProfile extends Component {
                                                 <div className="d-flex">
                                                     <span className=" text-danger fw-bold shadow logo-text">REMAX</span>
                                                 </div>
-                                                <Button className="bg-transparent button text-dark edit-button border border-none   "><i style={{ color: '#7F48F7' }} class="far fa-edit"></i> Edit</Button>
+                                                <Button className="bg-transparent button text-dark edit-button border border-none   "><i style={{ color: '#7F48F7',fontSize:'14px' }} class="far  fa-edit"></i> Edit</Button>
                                             </Col>
                                         </Row>
 
@@ -79,13 +79,13 @@ export default class CompanyProfile extends Component {
                                         <Card className="ms-3 mb-3">
                                             <Row className="p-4">
                                                 <Col className="text-center" md={4}>
-                                                    <Button className="folders bg-transparent p-2 mt-2 text-dark border border-none w-100 fw-bold" style={{fontSize: '13px', fontWeight: '400'}}> Folder Name 01 <i style={{ color: '#7F48F7' }} class="fas fa-lg ps-3 fa-folder"></i> </Button>
+                                                    <Button className="folders bg-transparent p-2 mt-2 text-dark border border-none w-100 fw-bold" style={{fontSize: '13px', fontWeight: '400'}}> Folder Name 01 <i style={{ color: '#7F48F7',marginLeft:'20px',fontSize:'22px' }} class="fas fa-lg ps-3 fa-folder"></i> </Button>
                                                 </Col>
                                                 <Col className="text-center" md={4}>
-                                                    <Button className="folders bg-transparent p-2 mt-2 text-dark border border-none w-100 fw-bold" style={{fontSize: '13px', fontWeight: '400'}}> Folder Name 02 <i style={{ color: '#7F48F7' }} class="fas fa-lg ps-3 fa-folder"></i> </Button>
+                                                    <Button className="folders bg-transparent p-2 mt-2 text-dark border border-none w-100 fw-bold" style={{fontSize: '13px', fontWeight: '400'}}> Folder Name 02 <i style={{ color: '#7F48F7',marginLeft:'20px',fontSize:'22px' }} class="fas fa-lg ps-3 fa-folder"></i> </Button>
                                                 </Col>
                                                 <Col className="text-center  " md={4}>
-                                                    <Button className="folders bg-transparent p-2 mt-2 text-dark border border-none w-100 fw-bold" style={{fontSize: '13px', fontWeight: '400'}}> Folder Name 03 <i style={{ color: '#7F48F7' }} class="fas fa-lg ps-3 fa-folder"></i> </Button>
+                                                    <Button className="folders bg-transparent p-2 mt-2 text-dark border border-none w-100 fw-bold" style={{fontSize: '13px', fontWeight: '400'}}> Folder Name 03 <i style={{ color: '#7F48F7',marginLeft:'20px',fontSize:'22px' }} class="fas fa-lg ps-3 fa-folder"></i> </Button>
                                                 </Col>
                                             </Row>
                                             <Row className="p-4">

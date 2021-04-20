@@ -40,7 +40,7 @@ class App extends Component {
               <div onClick={this.handleSidebar} className="cross-button  d-lg-none d-block">
                 <i class="fas fa-times text-white fa-lg"></i>
               </div>
-              <h3 className="logo text-center ">Logo</h3>
+              <h3  className="logo text-center ">Logo</h3>
               <ul className="pl-0 fw-bold ml-0">
                 <Link onClick={() => {
                   this.setState({

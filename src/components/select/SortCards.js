@@ -6,8 +6,8 @@ const SortCards = (props) => {
         <FormControl>
             <Select
                 displayEmpty
-                style={{ fontSize: 'x-small' }}
-                className="ml-1 p-0 m-0 custom-select-mui text-secondary"
+                style={{ fontSize: '9px' }}
+                className="ms-4 p-0 m-0 custom-select-mui text-secondary"
                 defaultValue={props.selected}
                 inputProps={{ 'aria-label': 'Without label', disableUnderline: true }}>
                 

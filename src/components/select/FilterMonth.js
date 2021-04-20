@@ -7,7 +7,7 @@ const FilterMonth = (props) => {
             <Select
                 displayEmpty
                 style={{fontSize: 'x-small'}}
-                className="ml-1 p-0 m-0 custom-select-mui text-secondary"
+                className="ms-3 p-0 m-0 custom-select-mui text-secondary"
                 defaultValue={props.selected}
                 inputProps={{ 'aria-label': 'Without label', disableUnderline: true }}>
                 <MenuItem value={'Months'}>Months</MenuItem>

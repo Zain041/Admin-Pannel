@@ -11,7 +11,7 @@ const SimpleSelect = (props) => {
     <div>
       <i class="fas fa-circle " style={{ color: 
         selected === 'Active' ? '#00dc54' : selected === 'Draft' ? '#808080' :
-        selected === 'Expired' ? '#FF3B30' : 'white'
+        selected === 'Expired' ? '#FF3B30' :  selected === 'Pending' ? '#077E8C' : 'white'
        }}></i> 
       <FormControl >
       <Select
@@ -24,6 +24,7 @@ const SimpleSelect = (props) => {
         <MenuItem value={'Active'}>Active</MenuItem>
         <MenuItem value={'Draft'}>Draft</MenuItem>
         <MenuItem value={'Expired'}>Expired</MenuItem>
+        <MenuItem value={'Pending'}>Pending Approval</MenuItem>
       </Select>
     </FormControl>
     </div>

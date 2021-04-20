@@ -55,7 +55,7 @@ export default class Dashboard extends Component {
                                     <Card>
                                         <div className="p-3 card-bg bg-exposure">
                                             <h6 style={{ fontWeight: '800' }} className="pb-0 mb-0 ">EXPOSURE</h6>
-                                            <span style={{ fontSize: '10px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January, 2021</span>
+                                            <span style={{ fontSize: '9px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January, 2021</span>
                                             <p style={{ fontWeight: '700', fontSize: 'large' }} className="mt-2">8514</p>
                                             <span style={{ color: '#7F48F7', fontWeight: '500' }} > 56% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
                                             <i style={{ float: 'right', marginTop: '-90px' }} class="fas opacity-3 dots text-secondary fa-ellipsis-h"></i>
@@ -68,7 +68,7 @@ export default class Dashboard extends Component {
                                     <Card>
                                         <div className="p-3 card-bg bg-open-card">
                                             <h6 style={{ fontWeight: '800' }} className="pb-0 mb-0 ">CARD OPENS</h6>
-                                            <span style={{ fontSize: '10px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January, 2021</span>
+                                            <span style={{ fontSize: '9px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January, 2021</span>
                                             <p style={{ fontWeight: '700', fontSize: 'large' }} className="mt-2">8514</p>
                                             <span style={{ color: '#7F48F7', fontWeight: '500' }} > 74% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
                                             <i style={{ float: 'right', marginTop: '-90px' }} class="fas dots opacity-3 text-secondary fa-ellipsis-h"></i>
@@ -81,7 +81,7 @@ export default class Dashboard extends Component {
                                     <Card style={{ backgroundColor: '#7F48F7', color: 'white' }}>
                                         <div className="p-3 card-bg bg-saved-card">
                                             <h6 style={{ fontWeight: '800' }} className="pb-0 mb-0 ">SAVED CARDS</h6>
-                                            <span style={{ fontSize: '10px', marginTop: '-10px', fontWeight: '500' }} className="text-white">From January, 2021</span>
+                                            <span style={{ fontSize: '9px', marginTop: '-10px', fontWeight: '500' }} className="text-white">From January, 2021</span>
                                             <p style={{ fontWeight: '700', fontSize: 'large' }} className="mt-2">23</p>
                                             <span style={{ fontWeight: '500' }}  > 3.9% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
                                             <i style={{ float: 'right', marginTop: '-90px' }} class="fas   fa-ellipsis-h"></i>
@@ -98,14 +98,14 @@ export default class Dashboard extends Component {
 
                                             <Row>
                                                 <Col md={6}>
-                                                    <h6 className=" ">DASHBOARD</h6>
+                                                    <h6 style={{fontWeight:'800'}} className=" ">DASHBOARD</h6>
                                                     <div style={{ marginTop: '-12px' }}>
                                                         <Engagement selected="Total Engagement" />
                                                         <SortCards selected="All Cards" />
                                                     </div>
                                                 </Col>
-                                                <Col md={3}>
-                                            <div className="pt-2">
+                                                <Col style={{paddingRight:'0px'}} className="text-end" md={3}>
+                                            <div className="pt-2 ">
                                                 <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">FROM</span>
                                                 <span style={{ fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>
                                             </div>
@@ -136,7 +136,7 @@ export default class Dashboard extends Component {
                                 </div>
                                 <div className="p-4 pb-2 pt-2 d-flex" style={{ backgroundColor: '#B2B4B3', color: 'white' }}>
                                     <h6 className="pb-0 mb-0 fw-bold">375</h6>
-                                    <span style={{ fontSize: '10px', marginLeft: '5px' }} className="mt-1">Opens</span>
+                                    <span style={{ fontSize: '10px',fontWeight:'600', marginLeft: '5px' }} className="mt-1">OPENS</span>
                                 </div>
                                 <div className="p-3 pt-2">
                                     <Card className="card-wrapper pt-0">
@@ -151,7 +151,7 @@ export default class Dashboard extends Component {
                                                 </br>
                                                 <span className="card-sub-description" >Remax [comapnay name]</span>
                                             </div>
-                                            <div className="star">
+                                            <div className="star pe-1">
                                                 <i style={{ color: '#F2D338' }} class="fas fa-star"></i>
                                                 <span><b>4.2</b> <br></br> &nbsp;&nbsp;<span className="fw-normal">KM</span></span>
                                             </div>
@@ -167,7 +167,7 @@ export default class Dashboard extends Component {
                                         <Col md={6}>
                                             <h6 className="fw-bold pt-2">CARD PERFORMANCE</h6>
                                         </Col>
-                                        <Col md={3}>
+                                        <Col style={{paddingRight:'0px'}} className="text-end" md={3}>
                                             <div className="pt-2">
                                                 <span style={{ fontSize: '10px' }} className="text-secondary pt-2 pe-3">FROM</span>
                                                 <span style={{ fontWeight: '800' }} className="fw-bold pt-1"><DatePickers /></span>

@@ -42,28 +42,28 @@ export default function BasicTable() {
             <TableCell align="left">
               <span style={{ fontWeight: '600' }}>Price</span>
               <Box className="sorting-btn" onClick={handleSort}>
-                <Box component="div" className="up-arrow"></Box>
+                <Box style={{marginBottom:'2px'}} component="div" className="up-arrow"></Box>
                 <Box component="div" className="down-arrow" ></Box>
               </Box>
             </TableCell>
             <TableCell align="left">
               <span style={{ fontWeight: '600' }}>Exposure</span>
               <Box className="sorting-btn" onClick={handleSort}>
-                <Box component="div" className="up-arrow"></Box>
+                <Box style={{marginBottom:'2px'}} component="div" className="up-arrow"></Box>
                 <Box component="div" className="down-arrow" ></Box>
               </Box>
             </TableCell>
             <TableCell align="left">
               <span style={{ fontWeight: '600' }}>Opens </span>
               <Box className="sorting-btn" onClick={handleSort}>
-                <Box component="div" className="up-arrow"></Box>
+                <Box style={{marginBottom:'2px'}} component="div" className="up-arrow"></Box>
                 <Box component="div" className="down-arrow" ></Box>
               </Box>
             </TableCell>
             <TableCell align="left">
               <span style={{ fontWeight: '600' }}>Engagments</span>
               <Box className="sorting-btn" onClick={handleSort}>
-                <Box component="div" className="up-arrow"></Box>
+                <Box style={{marginBottom:'2px'}} component="div" className="up-arrow"></Box>
                 <Box component="div" className="down-arrow" ></Box>
               </Box>
             </TableCell>

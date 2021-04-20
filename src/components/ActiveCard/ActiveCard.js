@@ -17,7 +17,7 @@ export default class ActiveCard extends Component {
                             <p className="text-secondary" style={{fontSize: '14px'}}>Subtitle post listing description</p>
                             <p className="mb-0" style={{fontWeight: '500', fontSize: '14px'}}>Expiry:-</p><br></br>
                             <p className="  text-secondary "> <CardDropdown selected="Active" /> </p>
-                            <h6>Price:$4.00</h6>
+                            <h6>Price: $4.00</h6>
 
 
                             <div class="button-section">
@@ -30,7 +30,7 @@ export default class ActiveCard extends Component {
                         <Col md={4} sm={12}>
                             <p className="text-secondary d-flex align-items-center">
                                 <span>Date range</span>
-                                <span style={{ color: '#7F48F7' }}> <FilterDateRange /> </span>
+                                <span className="ms-2" style={{ color: '#7F48F7' }}> <FilterDateRange /> </span>
                             </p>
 
                             <div className="d-flex">

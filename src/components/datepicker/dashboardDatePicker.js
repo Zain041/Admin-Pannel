@@ -20,7 +20,7 @@ export default function Datepickers() {
             endAdornment: (
               <InputAdornment position="start">
                 <Box className="sorting-btn">
-                  <Box component="div" className="up-arrow"></Box>
+                  <Box style={{marginBottom:'2px'}} component="div" className="up-arrow  "></Box>
                   <Box component="div" className="down-arrow" ></Box>
                 </Box>
               </InputAdornment>
