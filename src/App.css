@@ -23,7 +23,7 @@ html {
 .wrapper.content-body {
     position: relative;
     width: 100%;
-    padding-left: 175px;
+    padding-left: 200px;
     margin-bottom: 72px !important;
     overflow: hidden !important;
 }
@@ -38,7 +38,7 @@ html {
 
 .sidebar>ul>li:hover {
     background-color: #9361FF;
-    color:white ;
+    color: white;
 }
 
 
@@ -60,7 +60,7 @@ html {
 
 .links:hover li {
     background-color: #9361FF;
-    color:white ;
+    color: white;
 
 }
 
@@ -95,11 +95,13 @@ html {
 
 @media screen and (max-width: 768px) {
     .wrapper.content-body {
-        padding-left: 10px !important;
+        padding-top: 15px !important;
+        padding-left: 15px !important;
     }
 
 
-    .form-control, .input-field {
+    .form-control,
+    .input-field {
         width: unset !important;
     }
 
@@ -107,15 +109,18 @@ html {
 
 @media screen and (max-width: 540px) {
     .wrapper.content-body {
-        padding-left: 10px !important;
+        padding-top: 15px !important;
+        padding-left: 15px !important;
     }
 
 
-    .form-control, .input-field {
+    .form-control,
+    .input-field {
         width: unset !important;
     }
 
 }
+
 
 .card-bg {
     background-position: right 10px bottom 5px;
@@ -143,4 +148,5 @@ html {
     white-space: nowrap !important;
     border: 2px solid #EFF4F2 !important;
     border-radius: 5px !important;
+    height: 75px;
 }
