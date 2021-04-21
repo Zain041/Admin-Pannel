@@ -8,6 +8,7 @@ import DatePickers from '../../components/datepicker/dashboardDatePicker';
 import LineChart from '../../components/linechart/linechart';
 import Charts from '../../components/linechart/linechart';
 import Notification from '../../components/Notifications/notification'
+import Eclipseselect from '../../components/select/dashboardSelect';
 import Engagement from '../../components/select/Engagement';
 import FilterbyCards from '../../components/select/FilterbyCards';
 import FilterMonth from '../../components/select/FilterMonth';
@@ -52,39 +53,39 @@ export default class Dashboard extends Component {
                         <Col className="pt-5" lg={8}>
                             <Row>
                                 <Col className="ps-0 pt-2" md={4}>
-                                    <Card>
+                                    <Card className="shadow-sm">
                                         <div className="p-3 card-bg bg-exposure">
                                             <h6 style={{ fontWeight: '800' }} className="pb-0 mb-0 ">EXPOSURE</h6>
                                             <span style={{ fontSize: '9px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January, 2021</span>
                                             <p style={{ fontWeight: '700', fontSize: 'large' }} className="mt-2">8514</p>
-                                            <span style={{ color: '#7F48F7', fontWeight: '500' }} > 56% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
-                                            <i style={{ float: 'right', marginTop: '-90px' }} class="fas opacity-3 dots text-secondary fa-ellipsis-h"></i>
+                                            <span style={{ color: '#7F48F7', fontWeight: '500' }} > 56% <i class="fas ps-1 fa-arrow-alt-up"></i></span>
+                                            <div style={{ float: 'right', marginTop: '-90px' }} class="fas opacity-3 dots text-secondary "><Eclipseselect/></div>
                                         </div>
 
                                     </Card>
 
                                 </Col>
                                 <Col className="ps-0 pt-2" md={4}>
-                                    <Card>
+                                    <Card className="shadow-sm">
                                         <div className="p-3 card-bg bg-open-card">
                                             <h6 style={{ fontWeight: '800' }} className="pb-0 mb-0 ">CARD OPENS</h6>
                                             <span style={{ fontSize: '9px', marginTop: '-10px', fontWeight: '500' }} className="text-secondary">From January, 2021</span>
                                             <p style={{ fontWeight: '700', fontSize: 'large' }} className="mt-2">8514</p>
-                                            <span style={{ color: '#7F48F7', fontWeight: '500' }} > 74% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
-                                            <i style={{ float: 'right', marginTop: '-90px' }} class="fas dots opacity-3 text-secondary fa-ellipsis-h"></i>
+                                            <span style={{ color: '#7F48F7', fontWeight: '500' }} > 74% <i class="fas ps-1 fa-arrow-alt-up"></i></span>
+                                            <div style={{ float: 'right', marginTop: '-90px' }} class="fas opacity-3 dots text-secondary "><Eclipseselect/></div>
                                         </div>
 
                                     </Card>
                                 </Col>
 
                                 <Col className="ps-0 pt-2" md={4}>
-                                    <Card style={{ backgroundColor: '#7F48F7', color: 'white' }}>
+                                    <Card className="shadow-sm" style={{ backgroundColor: '#7F48F7', color: 'white' }}>
                                         <div className="p-3 card-bg bg-saved-card">
                                             <h6 style={{ fontWeight: '800' }} className="pb-0 mb-0 ">SAVED CARDS</h6>
                                             <span style={{ fontSize: '9px', marginTop: '-10px', fontWeight: '500' }} className="text-white">From January, 2021</span>
                                             <p style={{ fontWeight: '700', fontSize: 'large' }} className="mt-2">23</p>
-                                            <span style={{ fontWeight: '500' }}  > 3.9% <i class="fas ps-1 fa-long-arrow-alt-up"></i></span>
-                                            <i style={{ float: 'right', marginTop: '-90px' }} class="fas   fa-ellipsis-h"></i>
+                                            <span style={{ fontWeight: '500' }}  > 3.9% <i class="fas ps-1 fa-arrow-alt-up"></i></span>
+                                            <div style={{ float: 'right', marginTop: '-90px' }} class="fas opacity-3 dots text-secondary "><Eclipseselect/></div>
                                             {/* <i style={{float:'right'}} class="far fa-3x fa-heart "></i> */}
                                         </div>
 
@@ -93,7 +94,7 @@ export default class Dashboard extends Component {
 
                                 </Col>
                                 <Col className="pt-2 ps-0" md={12}>
-                                    <Card>
+                                    <Card className="shadow-sm">
                                         <CardHeader className="bg-white">
 
                                             <Row>
@@ -124,7 +125,7 @@ export default class Dashboard extends Component {
                             </Row>
                         </Col>
                         <Col style={{ paddingTop: '55px' }} className="ps-0" lg={4}>
-                            <Card>
+                            <Card className="shadow-sm">
                                 <div className="p-3">
                                     <h2 style={{ paddingTop: '45px', paddingBottom: '45px' }} className=" text-center text-danger   fw-bold">
                                         <img width="100%" src={require('../../assets/re-max.jpg').default} alt="Logo" />
@@ -161,7 +162,7 @@ export default class Dashboard extends Component {
                             </Card>
                         </Col>
                         <Col className="pt-3 ps-0 " lg={8}>
-                            <Card>
+                            <Card className="shadow-sm"> 
                                 <CardHeader className="bg-white">
                                     <Row>
                                         <Col md={6}>
@@ -187,7 +188,7 @@ export default class Dashboard extends Component {
                             </Card>
                         </Col>
                         <Col className="ps-0 pt-3" lg={4} >
-                            <Card style={{ position: 'relative' }} className="">
+                            <Card className="shadow-sm" style={{ position: 'relative' }} className="">
                                 <CardHeader>
                                     <h6 className="fw-bold ">PERFORMANCE BY DAY</h6>
                                     <div style={{ marginTop: '-12px' }}>

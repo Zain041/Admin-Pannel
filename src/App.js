@@ -72,8 +72,8 @@ class App extends Component {
                     activeItem: "createCard"
                   })
                 }} className={`links w-100 ${this.state.activeItem == 'createCard' ? 'active' : ''}`} to="/create-cards"> <li className="py-3 px-4 items"> <i class="fas fa-plus-circle px-3  "></i>Create Cards</li></Link>
-                <li style={{ marginTop: '90px' }} className="py-3 px-4"> <i class="fas fa-cog px-3  "></i>Settings</li>
-                <li className="py-3 px-4"> <i class="fas fa-life-ring px-3  "></i>Help</li>
+                <li style={{ marginTop: '60px' }} className="py-3 px-4"> <i class="fas fa-cog px-3  "></i>Settings</li>
+                <li className="py-3 px-4"> <i class="far fa-life-ring px-3  "></i>Help</li>
               </ul>
 
             </div>
