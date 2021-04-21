@@ -40,13 +40,13 @@ class App extends Component {
               <div onClick={this.handleSidebar} className="cross-button  d-lg-none d-block">
                 <i class="fas fa-times text-white fa-lg"></i>
               </div>
-              <h3  className="logo text-center ">Logo</h3>
+              <h3 className="logo text-center ">Logo</h3>
               <ul className="pl-0 fw-bold ml-0">
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "dashboard"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'dashboard' ? 'active' : ''}`} to="/">  <li className="py-3 px-4 items "> <i class="fas fa-chart-bar px-3  "></i>Dashboard</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'dashboard' ? 'active' : ''}`} to="/">  <li className="py-3 px-4 items d-flex"> {this.state.activeItem == 'dashboard' ? <img src={require('./assets/svg/bar-chart-pink.svg').default} /> : <img src={require('./assets/svg/bar-chart.svg').default} /> } Dashboard</li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "activeCards"
@@ -72,6 +72,7 @@ class App extends Component {
                     activeItem: "createCard"
                   })
                 }} className={`links w-100 ${this.state.activeItem == 'createCard' ? 'active' : ''}`} to="/create-cards"> <li className="py-3 px-4 items"> <i class="fas fa-plus-circle px-3  "></i>Create Cards</li></Link>
+                
                 <li style={{ marginTop: '60px' }} className="py-3 px-4"> <i class="fas fa-cog px-3  "></i>Settings</li>
                 <li className="py-3 px-4"> <i class="far fa-life-ring px-3  "></i>Help</li>
               </ul>
@@ -101,8 +102,6 @@ class App extends Component {
           </div >
 
         </Router >
-
-
 
       </>
     );
