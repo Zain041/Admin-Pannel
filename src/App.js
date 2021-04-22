@@ -61,7 +61,7 @@ class App extends Component {
                   this.setState({
                     activeItem: "expiredCards"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'expiredCards' ? 'active' : ''}`} to="/expired-cards"> <li className="py-3 px-4 items "> <i class="fas fa-history px-3  "></i>Expired Cards</li></Link>
+                }} className={`links w-100 ${this.state.activeItem ==  'expiredCards' ? 'active' : ''}`} to="/expired-cards"> <li className="py-3 px-4 items "> <i class="fas fa-history px-3  "></i>Expired Cards</li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "companyProfile"

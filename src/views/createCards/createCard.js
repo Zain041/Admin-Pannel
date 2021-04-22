@@ -10,6 +10,7 @@ import SimpleSelect from '../../components/select/select';
 import DateAndTimePickers from '../../components/datepicker/datepicker';
 import HelpText from '../../components/HelpText/HelpText';
 import { FormGroup } from '@material-ui/core';
+import ImageUpload from '../../components/crop/uploadCrop';
 
 
 export default class CreateCard extends Component {
@@ -98,8 +99,8 @@ export default class CreateCard extends Component {
 
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Header Image </Label ><br></br>
                                                 <img className="ps-4" height="100" width="300" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" />
-                                                <Label style={{ fontSize: '14px', border: '1px solid #d7dad7', borderRadius: '4px', fontWeight: '500', cursor: 'pointer' }} className="ms-4 p-2 mt-4 mb-1"> <input className="d-none" type="file" />Select From Gallery&nbsp; <i style={{ color: '#7F48F7' }} class="far fa-edit"></i> </Label ><br></br>
-
+                                                
+                                                    <ImageUpload/>
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Publish Card </Label ><br></br>
                                                 <Button className="bg-transparent button text-dark publish button border border-none ms-4 mb-md-0 mb-sm-2  ">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-upload"></i> </Button>
                                                 <Button className="bg-transparent button text-dark publish button border border-none ">Save as Drafr&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-wrench"></i> </Button>
