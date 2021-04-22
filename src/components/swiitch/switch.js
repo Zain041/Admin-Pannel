@@ -64,7 +64,7 @@ const IOSSwitch = withStyles((theme) => ({
 
 
 
-export default function Switches() {
+export default function Switches(props) {
   const [state, setState] = React.useState({
     checkedA: true,
     checkedB: true,
@@ -77,10 +77,9 @@ export default function Switches() {
 
   return (
     <FormGroup>
-     
       <FormControlLabel 
       style={{marginLeft:'65px'}}
-      className=""
+      className={props.className}
         control={<IOSSwitch checked={state.checkedB} onChange={handleChange} name="checkedB" />}
         label=""
       />

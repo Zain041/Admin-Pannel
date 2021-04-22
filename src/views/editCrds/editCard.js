@@ -46,7 +46,7 @@ export default class EditCard extends Component {
                             </div>
                         </div>
                         <div className="col-lg-10 col-md-12 col-sm-12">
-                            <Card className="section-card shadow-sm rounded mt-5 ">
+                            <Card className="section-card reset-card-shadow rounded mt-5 ">
 
                                 <Row className="position-relative">
 
@@ -91,7 +91,7 @@ export default class EditCard extends Component {
                                             </Col>
                                             <Col md={5}>
                                                 <h6 className="fw-bold mt-2 text-center">Live Preview</h6>
-                                                <Card className="card-wrapper ms-4 me-2 shadow-sm rounded">
+                                                <Card className="card-wrapper ms-4 me-2 reset-card-shadow rounded">
                                                     <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>
@@ -109,7 +109,7 @@ export default class EditCard extends Component {
                                                         </div>
                                                     </CardBody>
                                                 </Card>
-                                                <Card className="card-wrapper ms-4 me-2 shadow-sm rounded">
+                                                <Card className="card-wrapper ms-4 me-2 reset-card-shadow rounded">
                                                     <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>

@@ -6,9 +6,9 @@ export default class DraftCard extends Component {
     render() {
         return (
             <>
-                <Card className=" section-card shadow-sm mt-4">
+                <Card className=" section-card reset-card-shadow mt-4">
                     <Row className="p-4">
-                        <Col md={6} sm={12}>
+                        <Col md={8} sm={12}>
                             <h3>Title post Listing</h3>
                             <p className="text-secondary" style={{fontSize: '14px'}}>Subtitle post listing description</p>
                             <p className="mb-0" style={{fontWeight: '500', fontSize: '14px'}}>Expiry:-</p><br></br>
@@ -16,14 +16,14 @@ export default class DraftCard extends Component {
                             <p className="  text-secondary "> <CardDropdown selected="Draft" /> </p>
                             <h6>Price:$4.00</h6>
 
-                            <div class="button-section">
-                                <Button className="bg-transparent text-dark border border-none  "><i class="fas fa-edit"></i> Edit</Button>
-                                <Button className="bg-transparent text-dark border border-none"><i class="fas fa-trash-alt"></i> Delete</Button>
+                            <div class="button-section float-start" style={{marginLeft: '125px'}}>
+                                <Button className="bg-transparent text-dark border border-none btn-edit"> Edit</Button>
+                                <Button className="bg-transparent text-dark border border-none btn-delete"> Delete</Button>
                             </div>
 
                         </Col>
-                        <Col md={6} sm={12}>
-                            <Card className="card-wrapper shadow-sm rounded">
+                        <Col md={4} sm={12}>
+                            <Card className="card-wrapper rounded">
                                 <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                 <CardBody>
                                     <div className="card-img-2"></div>

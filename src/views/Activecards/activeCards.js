@@ -40,7 +40,7 @@ export default class ActiveCards extends Component {
                                 <span style={{cursor:'pointer'}} onClick={this.handleNotification} class="badge   bg-danger">9</span>
                             </div>
                         </div>
-                        <div className="col-lg-10 col-md-12 colsm-12">
+                        <div className="col-lg-10 col-md-12 col-sm-12">
                             <ActiveCard/>
                         </div>
                         <div className="col-lg-10 col-md-12 col-sm-12">
