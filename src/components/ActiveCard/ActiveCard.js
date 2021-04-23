@@ -57,7 +57,7 @@ export default class ActiveCard extends Component {
 
                         <Col md={4} sm={12}>
 
-                            <Card className="card-wrapper reset-card-shadowrounded">
+                            <Card style={{width:'272px'}} className="card-wrapper reset-card-shadowrounded">
                                 <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                 <CardBody>
                                     <div className="card-img-2"></div>

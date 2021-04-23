@@ -38,7 +38,7 @@ class App extends Component {
           <div className="d-flex h-100 master-wrapper ">
             <div className={`sidebar  ${this.state.sideBarOpen ? " d-block  " : "d-none"} d-lg-block`}>
               <div onClick={this.handleSidebar} className="cross-button  d-lg-none d-block">
-                <i class="fas fa-times text-white fa-lg"></i>
+                <i class="fas fa-lg fa-times text-white fa-lg"></i>
               </div>
               <h3 className="logo text-center ">Logo</h3>
               <ul className="pl-0 fw-bold ml-0 h-100 overflow-auto">
@@ -51,38 +51,38 @@ class App extends Component {
                   this.setState({
                     activeItem: "activeCards"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'activeCards' ? 'active' : ''}`} to="/active-cards"> <li className="py-3 px-4 items"> <i class="fas fa-check-circle px-3  "></i>Active Cards</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'activeCards' ? 'active' : ''}`} to="/active-cards"> <li className="py-3 px-4 items"> <i class="fas fa-lg fa-check-circle px-3  "></i>Active Cards</li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "draftCards"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'draftCards' ? 'active' : ''}`} to="/draft-cards"> <li className="py-3 px-4 items"> <i class="fas fa-wrench px-3  "></i>Draft Cards</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'draftCards' ? 'active' : ''}`} to="/draft-cards"> <li className="py-3 px-4 items"> <i class="fas fa-lg fa-wrench px-3  "></i>Draft Cards</li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "expiredCards"
                   })
-                }} className={`links w-100 ${this.state.activeItem ==  'expiredCards' ? 'active' : ''}`} to="/expired-cards"> <li className="py-3 px-4 items "> <i class="fas fa-history px-3  "></i>Expired Cards</li></Link>
+                }} className={`links w-100 ${this.state.activeItem ==  'expiredCards' ? 'active' : ''}`} to="/expired-cards"> <li className="py-3 px-4 items "> <i class="fas fa-lg fa-history px-3  "></i>Expired Cards</li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "companyProfile"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'companyProfile' ? 'active' : ''}`} to="/company-profile"> <li className="py-3 px-4 items"> <i class="fas fa-building px-3  "></i>Compony Profile</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'companyProfile' ? 'active' : ''}`} to="/company-profile"> <li className="py-3 px-4 items"> <i class="fas fa-lg fa-building px-3  "></i>Compony Profile</li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "createCard"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'createCard' ? 'active' : ''}`} to="/create-cards"> <li className="py-3 px-4 items"> <i class="fas fa-plus-circle px-3  "></i>Create Cards</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'createCard' ? 'active' : ''}`} to="/create-cards"> <li className="py-3 px-4 items"> <i class="fas fa-lg fa-plus-circle px-3  "></i>Create Cards</li></Link>
 
                 <div className="align-bottom mt-5">
                   <li style={{ marginTop: '60px' }} className="py-3 px-4 items d-flex">  <img src={require('./assets/svg/gear.svg').default} /> Settings</li>
-                  <li className="py-3 px-4"> <i class="far fa-life-ring px-3  "></i>Help</li>
+                  <li className="py-3 px-4"> <i class="far fa-lg fa-life-ring px-3  "></i>Help</li>
                 </div>
               </ul>
 
             </div>
             {/* toggle button */}
             <div onClick={this.handleSidebar} className="hamburger d-block d-lg-none">
-              <i class="fas fa-lg text-secondary fa-bars  "></i>
+              <i class="fas fa-lg fa-lg text-secondary fa-bars  "></i>
             </div>
 
             {/* sidebar end */}

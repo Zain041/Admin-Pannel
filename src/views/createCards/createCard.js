@@ -102,8 +102,8 @@ export default class CreateCard extends Component {
                                                 
                                                     <ImageUpload/>
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Publish Card </Label ><br></br>
-                                                <Button className="bg-transparent button text-dark publish button border border-none ms-4 mb-md-0 mb-sm-2  ">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-upload"></i> </Button>
-                                                <Button className="bg-transparent button text-dark publish button border border-none ">Save as Drafr&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-wrench"></i> </Button>
+                                                <Button style={{padding:'10px',fontSize:'16px'}} className="bg-transparent button text-dark publish button border border-none ms-4 mb-md-0 mb-sm-2  ">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-upload"></i> </Button>
+                                                <Button style={{padding:'10px',fontSize:'16px'}} className="bg-transparent button text-dark publish button border border-none ">Save as Drafr&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-wrench"></i> </Button>
                                             </Col>
 
                                             <Col md={4} className="mx-auto" style={{ overflowY: 'scroll', maxHeight: '525px' }}>

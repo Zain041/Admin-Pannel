@@ -55,7 +55,7 @@ export default class ExpiredCard extends Component {
                         </Col>
                         <Col md={4} sm={12}>
 
-                            <Card className="card-wrapper rounded">
+                            <Card style={{width:'272px'}} className="card-wrapper rounded">
                                 <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                 <CardBody>
                                     <div className="card-img-2"></div>
