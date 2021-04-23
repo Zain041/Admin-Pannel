@@ -19,6 +19,9 @@ export default class CreateCard extends Component {
         this.state = {
             notificationOpen: false,
             accountOpen: false,
+            headerText: '',
+            subtitleText: '',
+            descriptionText: ''
         }
     }
     handleNotification = () => {
@@ -31,6 +34,40 @@ export default class CreateCard extends Component {
             accountOpen: !this.state.accountOpen
         })
     }
+
+    handleHeaderText = (event) => {
+        if(event.target.value.length > 28) {
+            alert("you can't write more than 28 characters!");
+            return;
+        }
+        const remainingCharacters = (28 - event.target.value.length) + " Characters remaining"
+        this.setState({
+            headerText: remainingCharacters
+        })
+    }
+
+    handleSubtitleText = (event) => {
+        if(event.target.value.length > 28) {
+            alert("you can't write more than 28 characters!");
+            return;
+        }
+        const remainingCharacters = (28 - event.target.value.length) + " Characters remaining"
+        this.setState({
+            subtitleText: remainingCharacters
+        })
+    }
+
+    handleDescriptionText = (event) => {
+        if(event.target.value.length > 28) {
+            alert("you can't write more than 28 characters!");
+            return;
+        }
+        const remainingCharacters = (28 - event.target.value.length) + " Characters remaining"
+        this.setState({
+            descriptionText: remainingCharacters
+        })
+    }
+
     render() {
         return (
             <>
@@ -59,14 +96,14 @@ export default class CreateCard extends Component {
                                         <Row>
                                             <Col style={{ borderRight: '2px solid #d7dad7', marginLeft: '50px', overflowY: 'scroll', maxHeight: '525px' }} className="pb-4" md={{ size: 6 }}>
                                                 <FormGroup>
-                                                    <Label style={{ fontSize: '14px' }} className="ps-4">Headr Title</Label >
-                                                    <Input style={{ backgroundColor: '#F5F6F7' }} type="text" className="mb-3 input-field ms-4 mt-1" />
-                                                    <HelpText text="28 Character remaining" />
+                                                    <Label style={{ fontSize: '14px' }} className="ps-4">Header Title</Label >
+                                                    <Input style={{ backgroundColor: '#F5F6F7' }} type="text" className="mb-3 input-field ms-4 mt-1" onChange={this.handleHeaderText} />
+                                                    <HelpText text={this.state.headerText} />
                                                 </FormGroup>
                                                 <FormGroup>
                                                     <Label style={{ fontSize: '14px' }} className="ps-4">Subtitle</Label >
-                                                    <Input className="input-field" style={{ backgroundColor: '#F5F6F7' }} type="text" className="mb-3 input-field ms-4  mt-1 " />
-                                                    <HelpText text="28 Character remaining" />
+                                                    <Input className="input-field" style={{ backgroundColor: '#F5F6F7' }} type="text" className="mb-3 input-field ms-4  mt-1 "  onChange={this.handleSubtitleText} />
+                                                    <HelpText text={this.state.subtitleText} />
 
                                                 </FormGroup>
 
@@ -78,8 +115,8 @@ export default class CreateCard extends Component {
 
                                                 <FormGroup>
                                                     <Label style={{ fontSize: '14px' }} className="ps-4">Long Description </Label >
-                                                    <Input className="input-field" style={{ backgroundColor: '#F5F6F7' }} type="textarea" rows="4" className="mb-3 input-field  ms-4 mt-1 " />
-                                                    <HelpText text="28 Character remaining" />
+                                                    <Input className="input-field" style={{ backgroundColor: '#F5F6F7' }} type="textarea" rows="4" className="mb-3 input-field  ms-4 mt-1 "  onChange={this.handleDescriptionText} />
+                                                    <HelpText text={this.state.descriptionText} />
                                                 </FormGroup>
 
                                                 <Label style={{ fontSize: '14px' }} className="ps-4">Category </Label >
@@ -99,20 +136,20 @@ export default class CreateCard extends Component {
 
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Header Image </Label ><br></br>
                                                 <img className="ps-4" height="100" width="300" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" />
-                                                
-                                                    <ImageUpload/>
+
+                                                <ImageUpload />
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Publish Card </Label ><br></br>
-                                                <div style={{float:'left'}} class="button-section  mt-4">
-                               
-                                <Button className="bg-transparent text-dark border border-none btn-publish ms-4   mb-md-0 mb-sm-2">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-upload"></i></Button>
-                                <Button className="bg-transparent text-dark border border-none btn-draft">Save as Drafr&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-wrench"></i></Button>
-                            </div>
-                                               
+                                                <div style={{ float: 'left' }} class="button-section  mt-4">
+
+                                                    <Button className="bg-transparent text-dark border border-none btn-publish ms-4   mb-md-0 mb-sm-2">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-upload"></i></Button>
+                                                    <Button className="bg-transparent text-dark border border-none btn-draft">Save as Drafr&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-wrench"></i></Button>
+                                                </div>
+
                                             </Col>
 
                                             <Col md={4} className="mx-auto ps-0" style={{ overflowY: 'scroll', maxHeight: '525px' }}>
                                                 <h6 className="fw-bold mt-2 text-center">Live Preview</h6>
-                                                <Card  style={{width:'272px'}}className="card-wrapper  rounded">
+                                                <Card style={{ width: '272px' }} className="card-wrapper  rounded">
                                                     <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>
@@ -130,7 +167,7 @@ export default class CreateCard extends Component {
                                                         </div>
                                                     </CardBody>
                                                 </Card>
-                                                <Card style={{width:'272px'}} className="card-wrapper mr-1 rounded">
+                                                <Card style={{ width: '272px' }} className="card-wrapper mr-1 rounded">
                                                     <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>
