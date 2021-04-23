@@ -102,13 +102,17 @@ export default class CreateCard extends Component {
                                                 
                                                     <ImageUpload/>
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Publish Card </Label ><br></br>
-                                                <Button style={{padding:'10px',fontSize:'16px'}} className="bg-transparent button text-dark publish button border border-none ms-4 mb-md-0 mb-sm-2  ">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-upload"></i> </Button>
-                                                <Button style={{padding:'10px',fontSize:'16px'}} className="bg-transparent button text-dark publish button border border-none ">Save as Drafr&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-wrench"></i> </Button>
+                                                <div style={{float:'left'}} class="button-section  mt-4">
+                               
+                                <Button className="bg-transparent text-dark border border-none btn-publish ms-4   mb-md-0 mb-sm-2">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-upload"></i></Button>
+                                <Button className="bg-transparent text-dark border border-none btn-draft">Save as Drafr&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-wrench"></i></Button>
+                            </div>
+                                               
                                             </Col>
 
-                                            <Col md={4} className="mx-auto" style={{ overflowY: 'scroll', maxHeight: '525px' }}>
+                                            <Col md={4} className="mx-auto ps-0" style={{ overflowY: 'scroll', maxHeight: '525px' }}>
                                                 <h6 className="fw-bold mt-2 text-center">Live Preview</h6>
-                                                <Card className="card-wrapper rounded">
+                                                <Card  style={{width:'272px'}}className="card-wrapper  rounded">
                                                     <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>
@@ -126,7 +130,7 @@ export default class CreateCard extends Component {
                                                         </div>
                                                     </CardBody>
                                                 </Card>
-                                                <Card className="card-wrapper rounded">
+                                                <Card style={{width:'272px'}} className="card-wrapper mr-1 rounded">
                                                     <CardImg top className="card-img" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" alt="Card image cap" />
                                                     <CardBody>
                                                         <div className="card-img-2"></div>

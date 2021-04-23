@@ -46,36 +46,36 @@ class App extends Component {
                   this.setState({
                     activeItem: "dashboard"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'dashboard' ? 'active' : ''}`} to="/">  <li className="py-3 px-4 items d-flex"> {this.state.activeItem == 'dashboard' ? <img src={require('./assets/svg/bar-chart-pink.svg').default} /> : <img src={require('./assets/svg/bar-chart.svg').default} />} Dashboard</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'dashboard' ? 'active' : ''}`} to="/">  <li className="py-3 px-2 items d-flex"> {this.state.activeItem == 'dashboard' ? <img src={require('./assets/svg/bar-chart-pink.svg').default} /> : <img src={require('./assets/svg/bar-chart.svg').default} />}<span style={{fontSize:'15px'}}>Dashboard</span> </li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "activeCards"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'activeCards' ? 'active' : ''}`} to="/active-cards"> <li className="py-3 px-4 items"> <i class="fas fa-lg fa-check-circle px-3  "></i>Active Cards</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'activeCards' ? 'active' : ''}`} to="/active-cards"> <li className="py-3 px-2 items"> <i class="fas fa-lg fa-check-circle px-3  "></i><span style={{fontSize:'15px'}}>Active Cards</span></li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "draftCards"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'draftCards' ? 'active' : ''}`} to="/draft-cards"> <li className="py-3 px-4 items"> <i class="fas fa-lg fa-wrench px-3  "></i>Draft Cards</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'draftCards' ? 'active' : ''}`} to="/draft-cards"> <li className="py-3 px-2 items"> <i class="fas fa-lg fa-wrench px-3  "></i><span style={{fontSize:'15px'}}>Draft Cards</span></li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "expiredCards"
                   })
-                }} className={`links w-100 ${this.state.activeItem ==  'expiredCards' ? 'active' : ''}`} to="/expired-cards"> <li className="py-3 px-4 items "> <i class="fas fa-lg fa-history px-3  "></i>Expired Cards</li></Link>
+                }} className={`links w-100 ${this.state.activeItem ==  'expiredCards' ? 'active' : ''}`} to="/expired-cards"> <li className="py-3 px-2 items "> <i class="fas fa-lg fa-history px-3  "></i><span style={{fontSize:'15px'}}>Expired Cards</span></li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "companyProfile"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'companyProfile' ? 'active' : ''}`} to="/company-profile"> <li className="py-3 px-4 items"> <i class="fas fa-lg fa-building px-3  "></i>Compony Profile</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'companyProfile' ? 'active' : ''}`} to="/company-profile"> <li className="py-3 px-2 items"> <i class="fas fa-lg fa-building px-3  "></i><span style={{fontSize:'15px'}}>Compony Profile</span></li></Link>
                 <Link onClick={() => {
                   this.setState({
                     activeItem: "createCard"
                   })
-                }} className={`links w-100 ${this.state.activeItem == 'createCard' ? 'active' : ''}`} to="/create-cards"> <li className="py-3 px-4 items"> <i class="fas fa-lg fa-plus-circle px-3  "></i>Create Cards</li></Link>
+                }} className={`links w-100 ${this.state.activeItem == 'createCard' ? 'active' : ''}`} to="/create-cards"> <li className="py-3 px-2 items"> <i class="fas fa-lg fa-plus-circle px-3  "></i><span style={{fontSize:'15px'}}>Create Cards</span></li></Link>
 
                 <div className="align-bottom mt-5">
-                  <li style={{ marginTop: '60px' }} className="py-3 px-4 items d-flex">  <img src={require('./assets/svg/gear.svg').default} /> Settings</li>
-                  <li className="py-3 px-4"> <i class="far fa-lg fa-life-ring px-3  "></i>Help</li>
+                  <li style={{ marginTop: '60px' }} className="py-3 px-2 items d-flex">  <img src={require('./assets/svg/gear.svg').default} /><span style={{fontSize:'15px'}}> Settings</span></li>
+                  <li className="py-3 px-2"> <i class="far fa-lg fa-life-ring px-3  "></i><span style={{fontSize:'15px'}}>Help</span></li>
                 </div>
               </ul>
 
