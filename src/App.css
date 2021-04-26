@@ -197,3 +197,10 @@ html {
     color: #7f48f7 !important;
     font-weight: 600;
 }
+
+.btn-after-edit:after {
+    content: url(assets/svg/edit.svg);
+    width: 20px;
+    float: left;
+    margin-right: 5px;
+}

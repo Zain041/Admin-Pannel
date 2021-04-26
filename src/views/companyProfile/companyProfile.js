@@ -5,6 +5,10 @@ import '../../assets/css/companyProfile.css'
 import Notification from '../../components/Notifications/notification';
 import Account from '../../components/accounts/account';
 import { Card, Input, Form, Row, Col, Label, Button } from 'reactstrap'
+import ImageUpload from '../../components/crop/uploadCrop';
+
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
 
 
 export default class CompanyProfile extends Component {
@@ -13,6 +17,7 @@ export default class CompanyProfile extends Component {
         this.state = {
             notificationOpen: false,
             accountOpen: false,
+            ImageModal: false,
         }
     }
     handleNotification = () => {
@@ -23,6 +28,16 @@ export default class CompanyProfile extends Component {
     handleAccount = () => {
         this.setState({
             accountOpen: !this.state.accountOpen
+        })
+    }
+    onOpenModal = () => {
+        this.setState({
+            ImageModal: true
+        })
+    }
+    onCloseModal = () => {
+        this.setState({
+            ImageModal: false
         })
     }
     render() {
@@ -68,15 +83,26 @@ export default class CompanyProfile extends Component {
                                                 <div className="d-flex align-items-center">
                                                     <span className="text-danger fw-bold shadow logo-text d-inline overflow-hidden">
                                                         {/* REMAX */}
-                                                        <img width="50" height="25" style={{objectFit: 'cover'}} src={require('../../assets/re-max.jpg').default} alt="Logo" />
+                                                        <img width="50" height="25" style={{ objectFit: 'cover' }} src={require('../../assets/re-max.jpg').default} alt="Logo" />
                                                     </span>
-                                                    <Button className="bg-transparent text-dark border ms-4 border-none btn-edit"> Edit</Button>
+                                                    <Button className="bg-transparent text-dark border ms-4 border-none btn-edit" onClick={this.onOpenModal}> Edit</Button>
+                                                    <div>
+                                                        <Modal open={this.state.ImageModal} onClose={this.onCloseModal} center
+                                                            classNames={{
+                                                                overlay: 'customOverlay',
+                                                                modal: 'importImage',
+                                                            }}>
+                                                            <h6>Select Image</h6>
+                                                            <ImageUpload text={`Choose Image`} className="mb-4" EndIcon={<i style={{ color: '#7F48F7' }} class="far fa-edit"></i>} />
+                                                        </Modal>
+                                                    </div>
+                                                    
                                                 </div>
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <Col md={{ size: '12', offset: 1 }} xs={{ size: '12'}}>
-                                                <Button className="bg-transparent text-dark ms-2 btn-add-address mt-5 mb-3" style={{border: 'none'}}> Add Another Address</Button>
+                                            <Col md={{ size: '12', offset: 1 }} xs={{ size: '12' }}>
+                                                <Button className="bg-transparent text-dark ms-2 btn-add-address mt-5 mb-3" style={{ border: 'none' }}> Add Another Address</Button>
                                             </Col>
                                         </Row>
                                         <Row className="mb-5">
@@ -158,7 +184,6 @@ export default class CompanyProfile extends Component {
                                     </Col>
                                 </Row>
                             </Card>
-
                         </div>
 
                         <Notification notificationOpen={this.state.notificationOpen} onClick={this.handleNotification} />

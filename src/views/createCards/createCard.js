@@ -12,6 +12,10 @@ import HelpText from '../../components/HelpText/HelpText';
 import { FormGroup } from '@material-ui/core';
 import ImageUpload from '../../components/crop/uploadCrop';
 
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
+import ImageGallery from '../../components/ImageGallery/ImageGallery';
+
 
 export default class CreateCard extends Component {
     constructor(props) {
@@ -21,7 +25,8 @@ export default class CreateCard extends Component {
             accountOpen: false,
             headerText: '',
             subtitleText: '',
-            descriptionText: ''
+            descriptionText: '',
+            ImageModal: false,
         }
     }
     handleNotification = () => {
@@ -35,8 +40,19 @@ export default class CreateCard extends Component {
         })
     }
 
+    onOpenModal = () => {
+        this.setState({
+            ImageModal: true
+        })
+    }
+    onCloseModal = () => {
+        this.setState({
+            ImageModal: false
+        })
+    }
+
     handleHeaderText = (event) => {
-        if(event.target.value.length > 28) {
+        if (event.target.value.length > 28) {
             alert("you can't write more than 28 characters!");
             return;
         }
@@ -47,7 +63,7 @@ export default class CreateCard extends Component {
     }
 
     handleSubtitleText = (event) => {
-        if(event.target.value.length > 28) {
+        if (event.target.value.length > 28) {
             alert("you can't write more than 28 characters!");
             return;
         }
@@ -58,7 +74,7 @@ export default class CreateCard extends Component {
     }
 
     handleDescriptionText = (event) => {
-        if(event.target.value.length > 28) {
+        if (event.target.value.length > 28) {
             alert("you can't write more than 28 characters!");
             return;
         }
@@ -102,7 +118,7 @@ export default class CreateCard extends Component {
                                                 </FormGroup>
                                                 <FormGroup>
                                                     <Label style={{ fontSize: '14px' }} className="ps-4">Subtitle</Label >
-                                                    <Input className="input-field" style={{ backgroundColor: '#F5F6F7' }} type="text" className="mb-3 input-field ms-4  mt-1 "  onChange={this.handleSubtitleText} />
+                                                    <Input className="input-field" style={{ backgroundColor: '#F5F6F7' }} type="text" className="mb-3 input-field ms-4  mt-1 " onChange={this.handleSubtitleText} />
                                                     <HelpText text={this.state.subtitleText} />
 
                                                 </FormGroup>
@@ -115,7 +131,7 @@ export default class CreateCard extends Component {
 
                                                 <FormGroup>
                                                     <Label style={{ fontSize: '14px' }} className="ps-4">Long Description </Label >
-                                                    <Input className="input-field" style={{ backgroundColor: '#F5F6F7' }} type="textarea" rows="4" className="mb-3 input-field  ms-4 mt-1 "  onChange={this.handleDescriptionText} />
+                                                    <Input className="input-field" style={{ backgroundColor: '#F5F6F7' }} type="textarea" rows="4" className="mb-3 input-field  ms-4 mt-1 " onChange={this.handleDescriptionText} />
                                                     <HelpText text={this.state.descriptionText} />
                                                 </FormGroup>
 
@@ -136,13 +152,23 @@ export default class CreateCard extends Component {
 
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Header Image </Label ><br></br>
                                                 <img className="ps-4" height="100" width="300" src="https://cdn.pixabay.com/photo/2017/08/01/12/43/kitchen-2565105_960_720.jpg" />
+                                                <Button className="bg-transparent text-dark border border-none btn-draft ms-4 mb-md-0 mb-sm-2 mt-3" onClick={this.onOpenModal}>Import From Gallery <span><img style={{width: 20, marginBottom: 5, marginLeft: 5}} src={require('../../assets/svg/edit.svg').default} alt="choose image" /></span> </Button>
+                                                <div>
+                                                    <Modal open={this.state.ImageModal} onClose={this.onCloseModal} center
+                                                        classNames={{
+                                                            overlay: 'customOverlay',
+                                                            modal: 'importImage',
+                                                        }}>
+                                                        <h6>Select Image</h6>
+                                                        <ImageGallery />
+                                                        {/* <ImageUpload /> */}
+                                                    </Modal>
+                                                </div>
 
-                                                <ImageUpload />
                                                 <Label style={{ fontSize: '14px' }} className="ps-4 mt-4 mb-1">Publish Card </Label ><br></br>
                                                 <div style={{ float: 'left' }} class="button-section  mt-4">
-
-                                                    <Button className="bg-transparent text-dark border border-none btn-publish ms-4   mb-md-0 mb-sm-2">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-upload"></i></Button>
-                                                    <Button className="bg-transparent text-dark border border-none btn-draft">Save as Drafr&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-wrench"></i></Button>
+                                                    <Button className="bg-transparent text-dark border border-none btn-publish ms-4 mb-md-0 mb-sm-2">Publish Now &nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-upload"></i></Button>
+                                                    <Button className="bg-transparent text-dark border border-none btn-draft">Save as Draft&nbsp; &nbsp;<i style={{ color: '#7F48F7' }} class="fas fa-lg fa-wrench"></i></Button>
                                                 </div>
 
                                             </Col>

@@ -2,11 +2,11 @@
 import React, { PureComponent } from 'react';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
-import {Label} from 'reactstrap'
+import { Label } from 'reactstrap'
 
 
 
- export default class ImageUpload extends PureComponent {
+export default class ImageUpload extends PureComponent {
   state = {
     src: null,
     crop: {
@@ -92,23 +92,26 @@ import {Label} from 'reactstrap'
 
     return (
       <div className="App">
-        <div>
-        <Label style={{ fontSize: '14px', border: '1px solid #d7dad7', borderRadius: '4px', fontWeight: '500', cursor: 'pointer' }} className="ms-4 p-2 mt-4 mb-1"> <input className="d-none"  type="file" accept="image/*" onChange={this.onSelectFile} />Select From Gallery&nbsp; <i style={{ color: '#7F48F7' }} class="far fa-edit"></i> </Label ><br></br>
-          {/* <input type="file" accept="image/*" onChange={this.onSelectFile} /> */}
+        <Label style={{ fontSize: '1rem', border: '1px solid #d7dad7', borderRadius: '4px', cursor: 'pointer' }} className={`bg-transparent text-dark border border-none p-2 mt-4 mb-1 ${this.props.className}`}> <input className="d-none" type="file" accept="image/*" onChange={this.onSelectFile} />{this.props.StartIcon} &nbsp; {this.props.text} &nbsp; {this.props.EndIcon} </Label >
+        <div className="row align-items-center">
+          <div className="col-md-6">
+            {src && (
+              <ReactCrop
+                src={src}
+                crop={crop}
+                ruleOfThirds
+                onImageLoaded={this.onImageLoaded}
+                onComplete={this.onCropComplete}
+                onChange={this.onCropChange}
+              />
+            )}
+          </div>
+          <div className="col-md-6">
+            {croppedImageUrl && (
+              <img alt="Crop" style={{ maxWidth: '100%' }} src={croppedImageUrl} />
+            )}
+          </div>
         </div>
-        {src && (
-          <ReactCrop
-            src={src}
-            crop={crop}
-            ruleOfThirds
-            onImageLoaded={this.onImageLoaded}
-            onComplete={this.onCropComplete}
-            onChange={this.onCropChange}
-          />
-        )}
-        {croppedImageUrl && (
-          <img alt="Crop" style={{ maxWidth: '100%' }} src={croppedImageUrl} />
-        )}
       </div>
     );
   }
