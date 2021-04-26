@@ -159,8 +159,9 @@ export default class CreateCard extends Component {
                                                             overlay: 'customOverlay',
                                                             modal: 'importImage',
                                                         }}>
-                                                        <h6>Select Image</h6>
-                                                        <ImageGallery />
+                                                            <div className="modal-header"><h6>Select Image</h6> </div>
+                                                            <div className="modal-body"> <ImageGallery /> </div>
+                                                        
                                                         {/* <ImageUpload /> */}
                                                     </Modal>
                                                 </div>

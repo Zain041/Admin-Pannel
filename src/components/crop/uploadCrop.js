@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
-import { Label } from 'reactstrap'
+import { Label, Button } from 'reactstrap'
 
 
 
@@ -93,23 +93,35 @@ export default class ImageUpload extends PureComponent {
     return (
       <div className="App">
         <Label style={{ fontSize: '1rem', border: '1px solid #d7dad7', borderRadius: '4px', cursor: 'pointer' }} className={`bg-transparent text-dark border border-none p-2 mt-4 mb-1 ${this.props.className}`}> <input className="d-none" type="file" accept="image/*" onChange={this.onSelectFile} />{this.props.StartIcon} &nbsp; {this.props.text} &nbsp; {this.props.EndIcon} </Label >
-        <div className="row align-items-center">
+        <div className="row align-items-center justify-content-center">
           <div className="col-md-6">
             {src && (
-              <ReactCrop
-                src={src}
-                crop={crop}
-                ruleOfThirds
-                onImageLoaded={this.onImageLoaded}
-                onComplete={this.onCropComplete}
-                onChange={this.onCropChange}
-              />
+              <>
+                <h6 className="text-center fw-bold"> Crop Image </h6>
+                <ReactCrop
+                  src={src}
+                  crop={crop}
+                  ruleOfThirds
+                  style={{}}
+                  onImageLoaded={this.onImageLoaded}
+                  onComplete={this.onCropComplete}
+                  onChange={this.onCropChange}
+                />
+              </>
             )}
           </div>
           <div className="col-md-6">
             {croppedImageUrl && (
-              <img alt="Crop" style={{ maxWidth: '100%' }} src={croppedImageUrl} />
+              <>
+                <h6 className="text-center fw-bold"> Image Preview </h6>
+                <img alt="Crop" style={{ width: '100%' }} src={croppedImageUrl} />
+              </>
             )}
+          </div>
+          <div className="col-12">
+            {croppedImageUrl && (
+              <Button className="my-3 bg-transparent p-2 text-dark border border-none" style={{ borderRadius: '4px', fontSize: '14px', fontWeight: '500' }}>Save <i class="fas fa-save ms-1" style={{ color: '#7F48F7' }}></i> </Button>
+          )}
           </div>
         </div>
       </div>

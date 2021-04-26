@@ -85,7 +85,7 @@ html {
 .card-wrapper {
     margin-top: 20px;
     border-radius: 20px !important;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .dollar {
@@ -190,6 +190,7 @@ html {
     vertical-align: middle;
     margin-left: .25rem;
 }
+
 .up-arrow {
     width: 0;
     height: 0;
@@ -215,11 +216,14 @@ html {
     margin-left: .25rem;
     margin-top: -.25rem;
 }
-.custom-select-mui::before{
+
+.custom-select-mui::before {
     border-bottom: none !important;
 }
 
-.custom-select-mui:focus, .custom-select-mui:active, .custom-select-mui::before {
+.custom-select-mui:focus,
+.custom-select-mui:active,
+.custom-select-mui::before {
     border-bottom: none !important;
 }
 
@@ -234,5 +238,49 @@ html {
 }
 
 .importImage {
-    min-width: 25vw;
+    border-radius: 25px !important;
+    padding: 0 !important;
+    min-width: 50vw;
+    z-index: 9999999 !important;
+}
+
+.alert-box {
+    min-width: 25vw !important;
+}
+
+.importImage .modal-header {
+    background-color: #7F48F7 !important;
+    color: white;
+}
+
+.importImage .modal-header h6 {
+    margin: 0 auto;
+}
+
+.importImage button svg path {
+    fill: white;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f5f7f6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #dddddd;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #d1d1d1;
 }

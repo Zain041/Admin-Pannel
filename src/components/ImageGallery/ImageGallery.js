@@ -83,16 +83,18 @@ const Gallery = () => {
                             <Modal open={ImageModal} onClose={onCloseModal} center
                                 classNames={{
                                     overlay: 'customOverlay',
-                                    modal: 'importImage',
+                                    modal: 'importImage alert-box',
                                 }}>
-                                <h6>Altert!</h6>
-                                <div className="row">
-                                    <div className="col-12">
-                                        <p>Are you sure you want to upload this file?</p>
-                                    </div>
-                                    <div className="col-auto ms-auto">
-                                        <Button onClick={onCloseModal} className="me-3 bg-transparent p-2 text-dark border border-none" style={{ borderRadius: '4px', fontSize: '14px', fontWeight: '500' }}>Save <i class="fas fa-save ms-1" style={{ color: '#7F48F7' }}></i> </Button>
-                                        <Button onClick={onCloseModal} className="bg-transparent p-2 text-dark border border-none" style={{ borderRadius: '4px', fontSize: '14px', fontWeight: '500' }}>Cancel <i class="fas fa-times ms-1" style={{ color: '#7F48F7' }}></i> </Button>
+                                <div className="modal-header"> <h6>Alert</h6> </div>
+                                <div className="modal-body">
+                                    <div className="row">
+                                        <div className="col-12">
+                                            <p>Are you sure you want to upload this file?</p>
+                                        </div>
+                                        <div className="col-auto ms-auto">
+                                            <Button onClick={onCloseModal} className="me-3 bg-transparent p-2 text-dark border border-none" style={{ borderRadius: '4px', fontSize: '14px', fontWeight: '500' }}>Save <i class="fas fa-save ms-1" style={{ color: '#7F48F7' }}></i> </Button>
+                                            <Button onClick={onCloseModal} className="bg-transparent p-2 text-dark border border-none" style={{ borderRadius: '4px', fontSize: '14px', fontWeight: '500' }}>Cancel <i class="fas fa-times ms-1" style={{ color: '#7F48F7' }}></i> </Button>
+                                        </div>
                                     </div>
                                 </div>
                             </Modal>

@@ -92,8 +92,8 @@ export default class CompanyProfile extends Component {
                                                                 overlay: 'customOverlay',
                                                                 modal: 'importImage',
                                                             }}>
-                                                            <h6>Select Image</h6>
-                                                            <ImageUpload text={`Choose Image`} className="mb-4" EndIcon={<i style={{ color: '#7F48F7' }} class="far fa-edit"></i>} />
+                                                                <div className="modal-header"><h6>Image Editor</h6> </div>
+                                                                <div className="modal-body"> <ImageUpload text={`Choose Image`} className="mb-4" EndIcon={<i style={{ color: '#7F48F7' }} class="far fa-edit"></i>} /> </div>
                                                         </Modal>
                                                     </div>
                                                     
