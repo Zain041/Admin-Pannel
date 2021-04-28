@@ -18,6 +18,7 @@ export default class CompanyProfile extends Component {
             notificationOpen: false,
             accountOpen: false,
             ImageModal: false,
+            NewImageModal: false
         }
     }
     handleNotification = () => {
@@ -35,9 +36,20 @@ export default class CompanyProfile extends Component {
             ImageModal: true
         })
     }
+    onOpenNewImageModalModal = () => {
+        this.setState({
+            NewImageModal: true
+        })   
+    }
     onCloseModal = () => {
         this.setState({
             ImageModal: false
+        })
+    }
+
+    onCloseNewImageModal = () => {
+        this.setState({
+            NewImageModal: false
         })
     }
     render() {
@@ -175,8 +187,19 @@ export default class CompanyProfile extends Component {
                                             <Row className="p-4">
                                                 <Col className="mt-5">
                                                     <div class="ms-auto button-section">
-                                                        <Button className="bg-transparent p-2 text-dark border border-none" style={{ borderRadius: '4px', fontSize: '14px', fontWeight: '500' }}>New Folder <i class="fas fa-folder ms-1" style={{ color: '#7F48F7' }}></i> </Button>
-                                                        <Label style={{ fontSize: '14px', border: '1px solid #d7dad7', borderRadius: '4px', fontWeight: '500', cursor: 'pointer' }} className="bg-transparent text-dark border border-none p-2 mt-4 mb-1"> <input className="d-none" type="file" />Upload Image &nbsp; <i style={{ color: '#7F48F7' }} class="fas fa-upload ms-1"></i> </Label >
+                                                        <Button className="bg-transparent text-dark border ms-4 border-none" style={{ borderRadius: '4px', fontSize: '14px', fontWeight: '500' }}>New Folder <i class="fas fa-folder ms-1" style={{ color: '#7F48F7' }}></i> </Button>
+                                                        <Button className="bg-transparent text-dark border ms-4 border-none" style={{ borderRadius: '4px', fontSize: '14px', fontWeight: '500' }} onClick={this.onOpenNewImageModalModal}> Upload Image  <i style={{ color: '#7F48F7' }} class="fas fa-upload ms-1"></i> </Button>
+                                                        {/* <Label style={{ fontSize: '14px', border: '1px solid #d7dad7', borderRadius: '4px', fontWeight: '500', cursor: 'pointer' }} className="bg-transparent text-dark border border-none p-2 mt-4 mb-1"> <input className="d-none" type="file" />Upload Image &nbsp; <i style={{ color: '#7F48F7' }} class="fas fa-upload ms-1"></i> </Label > */}
+                                                    </div>
+                                                    <div>
+                                                        <Modal open={this.state.NewImageModal} onClose={this.onCloseNewImageModal} center
+                                                            classNames={{
+                                                                overlay: 'customOverlay',
+                                                                modal: 'importImage',
+                                                            }}>
+                                                                <div className="modal-header"><h6>Image Editor</h6> </div>
+                                                                <div className="modal-body"> <ImageUpload text={`Choose Image`} className="mb-4" EndIcon={<i style={{ color: '#7F48F7' }} class="far fa-edit"></i>} /> </div>
+                                                        </Modal>
                                                     </div>
                                                 </Col>
                                             </Row>
